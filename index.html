@@ -4,1058 +4,965 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aditya Agnihotri | Senior Marketing Executive</title>
+<title>Aditya Agnihotri | Marketing Operations & Automation</title>
 
-<meta name="description"
-content="Aditya Agnihotri — Senior Marketing Executive specializing in Marketing Operations, Marketing Automation, MarTech and digital execution.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Aditya Agnihotri — Marketing Operations, Marketing Automation and MarTech professional.">
 
 <style>
-:root{
-  --bg:#080a0f;
-  --bg2:#0d1017;
-  --card:#11151d;
-  --card2:#151a23;
-  --text:#f3f5f7;
-  --muted:#9299a8;
-  --line:rgba(255,255,255,.10);
-  --accent:#a5ff3f;
-  --accent2:#75c72c;
-  --purple:#9b7cff;
-  --cyan:#56d9ff;
-  --max:1200px;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #050507;
+    --bg2: #09090d;
+    --card: rgba(255,255,255,0.045);
+    --border: rgba(255,255,255,0.10);
+    --text: #f5f5f7;
+    --muted: #9b9ba5;
+    --purple: #8b5cf6;
+    --blue: #38bdf8;
+    --pink: #d946ef;
+    --glow: rgba(139,92,246,.35);
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-  background:
-    radial-gradient(circle at 75% 10%,rgba(165,255,63,.055),transparent 30%),
-    radial-gradient(circle at 15% 50%,rgba(155,124,255,.04),transparent 30%),
-    var(--bg);
-  color:var(--text);
-  font-family:"DM Sans",sans-serif;
-  line-height:1.6;
-  overflow-x:hidden;
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
 }
 
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:.035;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
-  z-index:999;
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 15% 15%, rgba(139,92,246,.10), transparent 25%),
+        radial-gradient(circle at 85% 25%, rgba(56,189,248,.07), transparent 25%);
+    z-index: -2;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+/* Cursor glow */
+
+.cursor-glow {
+    position: fixed;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(139,92,246,.10), transparent 65%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
 
-.container{
-  width:min(var(--max),calc(100% - 48px));
-  margin:auto;
+/* NAV */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: rgba(5,5,7,.72);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    z-index: 1000;
 }
 
-nav{
-  position:fixed;
-  top:18px;
-  left:50%;
-  transform:translateX(-50%);
-  width:min(1200px,calc(100% - 48px));
-  height:64px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 22px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:rgba(8,10,15,.76);
-  backdrop-filter:blur(18px);
-  z-index:100;
+.logo {
+    font-family: "Space Grotesk";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -1px;
 }
 
-.logo{
-  font-family:"Space Grotesk";
-  font-weight:700;
-  font-size:20px;
-  letter-spacing:-.8px;
+.logo span {
+    color: var(--purple);
 }
 
-.logo span{
-  color:var(--accent);
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
 }
 
-.navlinks{
-  display:flex;
-  gap:34px;
-  color:#9ca3b2;
-  font-size:14px;
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    transition: .25s;
 }
 
-.navlinks a{
-  transition:.25s;
+nav a:hover {
+    color: white;
 }
 
-.navlinks a:hover{
-  color:white;
-}
-
-.navbutton{
-  border:1px solid var(--line);
-  padding:11px 18px;
-  border-radius:14px;
-  transition:.25s;
-}
-
-.navbutton:hover{
-  border-color:var(--accent);
-  color:var(--accent);
+.nav-btn {
+    border: 1px solid rgba(255,255,255,.18);
+    padding: 10px 17px;
+    border-radius: 9px;
+    color: white;
 }
 
 /* HERO */
 
-.hero{
-  min-height:100vh;
-  display:grid;
-  grid-template-columns:1.05fr .95fr;
-  align-items:center;
-  gap:50px;
-  padding-top:90px;
+.hero {
+    min-height: 100vh;
+    padding: 140px 7% 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    position: relative;
 }
 
-.eyebrow{
-  color:var(--accent);
-  font-size:13px;
-  font-weight:700;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:24px;
+.hero-content {
+    max-width: 680px;
 }
 
-.hero h1{
-  font-family:"Space Grotesk";
-  font-size:clamp(58px,7.2vw,104px);
-  line-height:.91;
-  letter-spacing:-5px;
-  max-width:780px;
+.eyebrow {
+    color: var(--purple);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 20px;
 }
 
-.hero h1 .green{
-  color:var(--accent);
+.hero h1 {
+    font-family: "Space Grotesk";
+    font-size: clamp(58px, 7vw, 100px);
+    line-height: .92;
+    letter-spacing: -5px;
+    margin-bottom: 28px;
 }
 
-.hero-copy{
-  margin-top:30px;
-  color:var(--muted);
-  font-size:17px;
-  max-width:610px;
+.hero h1 span {
+    background: linear-gradient(90deg, #ffffff, #9b8cff, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.hero-actions{
-  display:flex;
-  gap:14px;
-  margin-top:32px;
-  flex-wrap:wrap;
+.hero-role {
+    font-size: 21px;
+    color: #dddde4;
+    margin-bottom: 22px;
 }
 
-.btn{
-  padding:14px 20px;
-  border-radius:13px;
-  border:1px solid var(--line);
-  font-weight:600;
-  font-size:14px;
-  transition:.25s;
+.hero-role b {
+    color: var(--purple);
 }
 
-.btn.primary{
-  background:var(--accent);
-  color:#0a0d09;
-  border-color:var(--accent);
+.hero-description {
+    color: var(--muted);
+    max-width: 600px;
+    line-height: 1.8;
+    font-size: 16px;
 }
 
-.btn.primary:hover{
-  transform:translateY(-2px);
-  box-shadow:0 12px 35px rgba(165,255,63,.18);
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
 }
 
-.btn.secondary:hover{
-  border-color:#777f90;
+.btn {
+    padding: 14px 22px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: .3s;
 }
 
-/* PROFILE CARD */
-
-.visual{
-  height:570px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  perspective:1000px;
+.btn-primary {
+    background: linear-gradient(90deg, var(--purple), #6366f1);
+    box-shadow: 0 0 30px rgba(139,92,246,.22);
 }
 
-.profile-scene{
-  position:relative;
-  width:410px;
-  height:500px;
-  transform-style:preserve-3d;
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 45px rgba(139,92,246,.4);
 }
 
-.orbit{
-  position:absolute;
-  inset:20px -30px;
-  border:1px solid rgba(165,255,63,.28);
-  border-radius:38px;
-  transform:rotate(7deg);
+.btn-secondary {
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.03);
 }
 
-.orbit.two{
-  inset:55px -5px;
-  border-color:rgba(86,217,255,.16);
-  transform:rotate(-7deg);
+.btn-secondary:hover {
+    background: rgba(255,255,255,.08);
 }
 
-.profile-card{
-  position:absolute;
-  inset:40px 10px 20px;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:28px;
-  background:linear-gradient(145deg,#202630,#11151d);
-  padding:24px;
-  box-shadow:0 40px 100px rgba(0,0,0,.45);
-  transform-style:preserve-3d;
-  transition:transform .15s ease-out;
+/* HERO PHOTO / ORBIT */
+
+.hero-visual {
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
-.photo-wrap{
-  height:350px;
-  border-radius:20px;
-  overflow:hidden;
-  background:linear-gradient(135deg,#252d39,#131923);
-  position:relative;
+.orbit {
+    width: 430px;
+    height: 430px;
+    border: 1px solid rgba(139,92,246,.55);
+    border-radius: 50%;
+    position: relative;
+    box-shadow:
+        0 0 50px rgba(139,92,246,.12),
+        inset 0 0 50px rgba(139,92,246,.05);
+    animation: float 6s ease-in-out infinite;
 }
 
-.photo-wrap::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(to top,rgba(0,0,0,.45),transparent 45%);
+.orbit::before {
+    content: "";
+    position: absolute;
+    inset: 25px;
+    border: 1px solid rgba(56,189,248,.25);
+    border-radius: 50%;
 }
 
-.photo{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
+.orbit::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #a78bfa;
+    border-radius: 50%;
+    top: 45px;
+    left: 70px;
+    box-shadow: 0 0 25px #8b5cf6;
+    animation: orbitMove 7s linear infinite;
 }
 
-.profile-info{
-  margin-top:20px;
-  display:flex;
-  align-items:end;
-  justify-content:space-between;
+.photo-frame {
+    position: absolute;
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid rgba(255,255,255,.18);
+    background: linear-gradient(135deg, #161620, #09090d);
+    box-shadow:
+        0 0 60px rgba(139,92,246,.22),
+        inset 0 0 40px rgba(255,255,255,.04);
 }
 
-.profile-info h3{
-  font-family:"Space Grotesk";
-  font-size:25px;
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.profile-info p{
-  color:var(--muted);
-  font-size:13px;
+.photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777783;
+    text-align: center;
+    padding: 50px;
+    line-height: 1.6;
 }
 
-.status{
-  width:11px;
-  height:11px;
-  background:var(--accent);
-  border-radius:50%;
-  box-shadow:0 0 18px var(--accent);
-  margin-bottom:7px;
+.floating-dot {
+    position: absolute;
+    border-radius: 50%;
+    background: #8b5cf6;
+    box-shadow: 0 0 25px #8b5cf6;
+}
+
+.dot1 {
+    width: 12px;
+    height: 12px;
+    top: 80px;
+    right: 40px;
+}
+
+.dot2 {
+    width: 7px;
+    height: 7px;
+    bottom: 80px;
+    left: 50px;
+    background: #38bdf8;
+    box-shadow: 0 0 20px #38bdf8;
+}
+
+@keyframes float {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes orbitMove {
+    0% { transform: rotate(0deg) translateX(190px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(190px) rotate(-360deg); }
 }
 
 /* SECTIONS */
 
-section{
-  padding:120px 0;
+section {
+    padding: 110px 7%;
 }
 
-.section-label{
-  color:var(--accent);
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:2px;
-  margin-bottom:16px;
+.section-label {
+    color: var(--purple);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
-.section-title{
-  font-family:"Space Grotesk";
-  font-size:clamp(38px,5vw,64px);
-  line-height:1;
-  letter-spacing:-3px;
-  max-width:750px;
-}
-
-.section-intro{
-  color:var(--muted);
-  max-width:680px;
-  margin-top:22px;
-  font-size:17px;
+.section-title {
+    font-family: "Space Grotesk";
+    font-size: clamp(35px, 4vw, 54px);
+    letter-spacing: -2px;
+    margin-bottom: 45px;
 }
 
 /* ABOUT */
 
-.about-grid{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:80px;
-  margin-top:60px;
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 60px;
 }
 
-.about-text{
-  color:#c3c8d2;
-  font-size:18px;
+.about-text {
+    color: var(--muted);
+    font-size: 18px;
+    line-height: 1.9;
 }
 
-.about-text p+p{
-  margin-top:20px;
+.about-text strong {
+    color: white;
 }
 
-.about-highlight{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:14px;
+.about-stat {
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 18px;
+    padding: 30px;
+    margin-bottom: 15px;
 }
 
-.stat{
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:28px;
-  background:rgba(255,255,255,.025);
-  transition:.3s;
+.about-stat .number {
+    font-family: "Space Grotesk";
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--purple);
 }
 
-.stat:hover{
-  transform:translateY(-5px);
-  border-color:rgba(165,255,63,.35);
+.about-stat p {
+    color: var(--muted);
+    margin-top: 5px;
 }
 
-.stat strong{
-  display:block;
-  color:var(--accent);
-  font-family:"Space Grotesk";
-  font-size:38px;
-  margin-bottom:6px;
+/* WHAT I BRING */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
 }
 
-.stat span{
-  color:var(--muted);
-  font-size:13px;
+.skill-card {
+    min-height: 210px;
+    border: 1px solid var(--border);
+    background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
+    border-radius: 18px;
+    padding: 30px;
+    transition: .35s;
+    position: relative;
+    overflow: hidden;
 }
 
-/* AI */
-
-.ai-section{
-  position:relative;
+.skill-card::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: var(--purple);
+    opacity: 0;
+    filter: blur(70px);
+    right: -70px;
+    top: -70px;
+    transition: .4s;
 }
 
-.ai-grid{
-  margin-top:55px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(139,92,246,.55);
 }
 
-.ai-card{
-  padding:34px;
-  border:1px solid var(--line);
-  border-radius:24px;
-  background:linear-gradient(145deg,rgba(155,124,255,.08),rgba(255,255,255,.025));
-  transition:.35s;
+.skill-card:hover::before {
+    opacity: .18;
 }
 
-.ai-card:hover{
-  transform:translateY(-8px);
-  border-color:rgba(155,124,255,.45);
+.skill-icon {
+    font-size: 28px;
+    margin-bottom: 22px;
 }
 
-.ai-number{
-  font-family:"Space Grotesk";
-  color:var(--purple);
-  font-size:13px;
-  letter-spacing:2px;
+.skill-card h3 {
+    margin-bottom: 12px;
 }
 
-.ai-card h3{
-  font-family:"Space Grotesk";
-  font-size:28px;
-  margin:28px 0 12px;
-}
-
-.ai-card p{
-  color:var(--muted);
-}
-
-/* SKILLS */
-
-.skills-grid{
-  margin-top:55px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:16px;
-}
-
-.skill{
-  border:1px solid var(--line);
-  border-radius:18px;
-  padding:24px;
-  background:rgba(255,255,255,.025);
-  transition:.3s;
-}
-
-.skill:hover{
-  transform:translateY(-5px);
-  border-color:rgba(165,255,63,.35);
-}
-
-.skill-number{
-  color:var(--accent);
-  font-size:12px;
-  font-weight:700;
-}
-
-.skill h3{
-  font-family:"Space Grotesk";
-  margin:14px 0 8px;
-  font-size:20px;
-}
-
-.skill p{
-  color:var(--muted);
-  font-size:14px;
+.skill-card p {
+    color: var(--muted);
+    line-height: 1.65;
+    font-size: 14px;
 }
 
 /* EXPERIENCE */
 
-.timeline{
-  margin-top:65px;
-  position:relative;
+.timeline {
+    max-width: 950px;
+    border-left: 1px solid rgba(139,92,246,.35);
+    padding-left: 40px;
 }
 
-.timeline::before{
-  content:"";
-  position:absolute;
-  left:85px;
-  top:0;
-  bottom:0;
-  width:1px;
-  background:var(--line);
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
 }
 
-.job{
-  display:grid;
-  grid-template-columns:170px 1fr;
-  gap:55px;
-  padding:0 0 60px;
-  position:relative;
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--purple);
+    box-shadow: 0 0 18px var(--purple);
+    left: -47px;
+    top: 7px;
 }
 
-.job-date{
-  color:var(--muted);
-  font-size:13px;
-  padding-top:5px;
+.timeline-date {
+    color: var(--purple);
+    font-size: 13px;
+    margin-bottom: 10px;
 }
 
-.job-date::after{
-  content:"";
-  position:absolute;
-  left:80px;
-  top:7px;
-  width:11px;
-  height:11px;
-  border-radius:50%;
-  background:var(--accent);
-  box-shadow:0 0 0 5px var(--bg);
+.timeline h3 {
+    font-family: "Space Grotesk";
+    font-size: 25px;
 }
 
-.job h3{
-  font-family:"Space Grotesk";
-  font-size:27px;
+.timeline-company {
+    color: #bbb;
+    margin: 5px 0 18px;
 }
 
-.job-role{
-  color:var(--accent);
-  font-size:13px;
-  margin:4px 0 18px;
+.timeline ul {
+    padding-left: 18px;
+    color: var(--muted);
+    line-height: 1.8;
 }
 
-.job ul{
-  list-style:none;
-  color:#aeb5c2;
+.timeline li {
+    margin-bottom: 6px;
 }
 
-.job li{
-  margin:10px 0;
-  padding-left:20px;
-  position:relative;
+/* HIGHLIGHT */
+
+.highlight {
+    margin-top: 40px;
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(139,92,246,.3);
+    background: linear-gradient(135deg, rgba(139,92,246,.08), rgba(56,189,248,.04));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-.job li::before{
-  content:"→";
-  color:var(--accent);
-  position:absolute;
-  left:0;
+.highlight-number {
+    font-family: "Space Grotesk";
+    font-size: 54px;
+    background: linear-gradient(90deg,#a78bfa,#38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
 }
 
-/* WORK */
-
-.work-grid{
-  margin-top:55px;
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-}
-
-.work-card{
-  min-height:220px;
-  border:1px solid var(--line);
-  border-radius:20px;
-  padding:25px;
-  background:rgba(255,255,255,.025);
-  transition:.3s;
-}
-
-.work-card:hover{
-  transform:translateY(-6px);
-  border-color:rgba(165,255,63,.35);
-}
-
-.work-card span{
-  color:var(--accent);
-  font-size:12px;
-}
-
-.work-card h3{
-  font-family:"Space Grotesk";
-  margin:25px 0 10px;
-  font-size:21px;
-}
-
-.work-card p{
-  color:var(--muted);
-  font-size:14px;
+.highlight p {
+    color: var(--muted);
+    line-height: 1.6;
 }
 
 /* TOOLS */
 
-.tools-box{
-  margin-top:55px;
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
+.tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-.tool{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.025);
-  padding:13px 18px;
-  border-radius:100px;
-  color:#c9ced8;
-  font-size:14px;
-  transition:.25s;
+.tool {
+    padding: 12px 18px;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    color: #d8d8df;
+    background: rgba(255,255,255,.035);
+    transition: .25s;
 }
 
-.tool:hover{
-  color:var(--accent);
-  border-color:rgba(165,255,63,.45);
+.tool:hover {
+    border-color: var(--purple);
+    color: white;
+    transform: translateY(-3px);
 }
 
-/* QUALIFICATIONS */
+/* WORK */
 
-.qual-grid{
-  margin-top:55px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
 }
 
-.qual-card{
-  padding:30px;
-  border:1px solid var(--line);
-  border-radius:22px;
-  background:rgba(255,255,255,.025);
+.work-card {
+    min-height: 260px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--card);
+    transition: .35s;
 }
 
-.qual-card h3{
-  font-family:"Space Grotesk";
-  margin-bottom:20px;
-  font-size:22px;
+.work-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(56,189,248,.45);
+}
+
+.work-number {
+    color: var(--purple);
+    font-size: 13px;
+    margin-bottom: 35px;
+}
+
+.work-card h3 {
+    margin-bottom: 12px;
+    font-family: "Space Grotesk";
+}
+
+.work-card p {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* QUALIFICATION */
+
+.qual-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.qual-card {
+    padding: 32px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--card);
+}
+
+.qual-card h3 {
+    margin-bottom: 15px;
 }
 
 .qual-card p,
-.qual-card li{
-  color:var(--muted);
-  font-size:15px;
+.qual-card li {
+    color: var(--muted);
+    line-height: 1.7;
 }
 
-.qual-card ul{
-  list-style:none;
-}
-
-.qual-card li{
-  padding:10px 0;
-  border-bottom:1px solid rgba(255,255,255,.06);
-}
-
-.qual-card li:last-child{
-  border-bottom:0;
+.qual-card ul {
+    padding-left: 20px;
 }
 
 /* CONTACT */
 
-.contact{
-  padding-bottom:70px;
+.contact {
+    text-align: center;
+    padding-bottom: 60px;
 }
 
-.contact-box{
-  border:1px solid var(--line);
-  border-radius:30px;
-  padding:60px;
-  background:
-    radial-gradient(circle at 80% 20%,rgba(165,255,63,.09),transparent 30%),
-    rgba(255,255,255,.025);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:40px;
+.contact h2 {
+    font-family: "Space Grotesk";
+    font-size: clamp(45px,7vw,85px);
+    letter-spacing: -4px;
+    margin-bottom: 20px;
 }
 
-.contact h2{
-  font-family:"Space Grotesk";
-  font-size:clamp(38px,5vw,68px);
-  line-height:1;
-  letter-spacing:-3px;
+.contact p {
+    color: var(--muted);
+    max-width: 550px;
+    margin: auto;
+    line-height: 1.8;
 }
 
-.contact h2 span{
-  color:var(--accent);
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
 }
 
-.contact-copy{
-  color:var(--muted);
-  max-width:550px;
-  margin-top:18px;
-}
-
-.contact-links{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  min-width:250px;
-}
-
-.contact-link{
-  padding:15px 18px;
-  border:1px solid var(--line);
-  border-radius:13px;
-  transition:.25s;
-}
-
-.contact-link:hover{
-  border-color:var(--accent);
-  color:var(--accent);
-}
-
-footer{
-  border-top:1px solid var(--line);
-  padding:25px 0;
-  color:#646b79;
-  font-size:12px;
-  display:flex;
-  justify-content:space-between;
+footer {
+    border-top: 1px solid var(--border);
+    padding: 25px 7%;
+    color: #666672;
+    font-size: 13px;
+    text-align: center;
 }
 
 /* REVEAL */
 
-.reveal{
-  opacity:0;
-  transform:translateY(35px);
-  transition:opacity .8s ease,transform .8s ease;
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: 1s ease;
 }
 
-.reveal.visible{
-  opacity:1;
-  transform:none;
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
-@media(max-width:900px){
+@media(max-width: 900px) {
 
-  .navlinks{
-    display:none;
-  }
+    nav ul {
+        display: none;
+    }
 
-  .hero{
-    grid-template-columns:1fr;
-    padding-top:130px;
-  }
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 120px;
+        text-align: center;
+    }
 
-  .visual{
-    height:500px;
-  }
+    .hero-content {
+        margin: auto;
+    }
 
-  .about-grid{
-    grid-template-columns:1fr;
-    gap:40px;
-  }
+    .hero-description {
+        margin: auto;
+    }
 
-  .skills-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .hero-buttons {
+        justify-content: center;
+    }
 
-  .work-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .hero-visual {
+        height: 420px;
+    }
 
-  .contact-box{
-    flex-direction:column;
-    align-items:flex-start;
-  }
+    .orbit {
+        width: 340px;
+        height: 340px;
+    }
 
+    .photo-frame {
+        width: 250px;
+        height: 250px;
+    }
+
+    .skills-grid,
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid,
+    .qual-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
-@media(max-width:600px){
+@media(max-width: 500px) {
 
-  .container{
-    width:min(100% - 30px,var(--max));
-  }
+    nav {
+        padding: 0 5%;
+    }
 
-  nav{
-    width:calc(100% - 24px);
-  }
+    .hero {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 
-  .hero h1{
-    font-size:58px;
-    letter-spacing:-3px;
-  }
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 
-  .visual{
-    transform:scale(.85);
-    margin-left:-30px;
-  }
+    .hero h1 {
+        font-size: 55px;
+        letter-spacing: -3px;
+    }
 
-  .skills-grid,
-  .work-grid,
-  .ai-grid,
-  .qual-grid{
-    grid-template-columns:1fr;
-  }
+    .hero-role {
+        font-size: 17px;
+    }
 
-  .timeline::before{
-    display:none;
-  }
+    .orbit {
+        width: 290px;
+        height: 290px;
+    }
 
-  .job{
-    grid-template-columns:1fr;
-    gap:8px;
-  }
-
-  .job-date::after{
-    display:none;
-  }
-
-  .contact-box{
-    padding:35px 25px;
-  }
-
-  footer{
-    flex-direction:column;
-    gap:10px;
-  }
+    .photo-frame {
+        width: 215px;
+        height: 215px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- NAV -->
+
 <nav>
-  <a class="logo" href="#top">ADITYA<span>.</span></a>
+    <div class="logo">AG<span>.</span></div>
 
-  <div class="navlinks">
-    <a href="#about">About</a>
-    <a href="#ai">AI</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#tools">Tools</a>
-  </div>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#skills">Tools</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 
-  <a class="navbutton" href="#contact">Let's Talk</a>
+    <a class="nav-btn" href="#contact">Let's Connect</a>
 </nav>
 
-<main id="top">
 
 <!-- HERO -->
 
-<section class="hero container">
+<header class="hero">
 
-  <div class="reveal">
+    <div class="hero-content reveal">
 
-    <div class="eyebrow">
-      Senior Marketing Executive · Marketing Operations · Marketing Automation
-    </div>
+        <div class="eyebrow">HELLO, I'M</div>
 
-    <h1>
-      MARKETING<br>
-      THAT RUNS<br>
-      <span class="green">SMARTER.</span>
-    </h1>
+        <h1>
+            Aditya<br>
+            <span>Agnihotri</span>
+        </h1>
 
-    <p class="hero-copy">
-      I work across marketing operations, automation, MarTech and digital execution —
-      turning campaign requirements into organised, scalable and effective marketing workflows.
-    </p>
-
-    <div class="hero-actions">
-      <a href="#experience" class="btn primary">Explore my experience</a>
-      <a href="#contact" class="btn secondary">View contact</a>
-    </div>
-
-  </div>
-
-  <div class="visual reveal">
-
-    <div class="profile-scene" id="profileScene">
-
-      <div class="orbit"></div>
-      <div class="orbit two"></div>
-
-      <div class="profile-card" id="profileCard">
-
-        <div class="photo-wrap">
-          <img src="profile.jpg" class="photo" alt="Aditya Agnihotri">
+        <div class="hero-role">
+            Marketing Operations <b>•</b>
+            Marketing Automation <b>•</b>
+            MarTech
         </div>
 
-        <div class="profile-info">
-          <div>
-            <h3>Aditya Agnihotri</h3>
-            <p>Marketing Operations & Automation</p>
-          </div>
-          <div class="status"></div>
-        </div>
+        <p class="hero-description">
+            I work at the intersection of marketing, technology and operations —
+            building campaigns, automation workflows, digital experiences and
+            processes that help marketing teams operate more efficiently.
+        </p>
 
-      </div>
+        <div class="hero-buttons">
+            <a href="#work" class="btn btn-primary">Explore My Work ↓</a>
+            <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+        </div>
 
     </div>
 
-  </div>
 
-</section>
+    <div class="hero-visual reveal">
+
+        <div class="orbit">
+
+            <div class="photo-frame">
+
+                <!-- YOUR PHOTO WILL GO HERE -->
+                <div class="photo-placeholder">
+                    Your professional photo<br>
+                    will be added here.
+                </div>
+
+            </div>
+
+            <div class="floating-dot dot1"></div>
+            <div class="floating-dot dot2"></div>
+
+        </div>
+
+    </div>
+
+</header>
 
 
 <!-- ABOUT -->
 
 <section id="about">
 
-<div class="container reveal">
+    <div class="section-label">01 — ABOUT</div>
 
-  <div class="section-label">01 — ABOUT</div>
+    <div class="about-grid">
 
-  <h2 class="section-title">
-    Marketing operations is where marketing meets execution.
-  </h2>
+        <div class="about-text reveal">
 
-  <div class="about-grid">
+            <div class="section-title">
+                Where marketing<br>
+                meets technology.
+            </div>
 
-    <div class="about-text">
+            <p>
+                I'm a marketing professional with experience across
+                <strong>marketing operations, automation, lead generation,
+                campaign execution, website management and analytics.</strong>
+            </p>
 
-      <p>
-        I'm a marketing professional with 5+ years of experience across
-        marketing operations, B2B campaign execution, marketing automation,
-        website management, CRM operations and lead management.
-      </p>
+            <br>
 
-      <p>
-        My work sits close to the execution layer of marketing — building
-        campaigns, managing audiences, publishing digital experiences,
-        maintaining operational processes and helping teams move from
-        requirement to execution efficiently.
-      </p>
+            <p>
+                My work focuses on turning marketing requirements into
+                structured, scalable processes — from campaign execution and
+                lead management to landing pages, CRM coordination and
+                performance tracking.
+            </p>
 
-      <p>
-        Alongside the operational side, I've developed an interest in using
-        AI and automation to remove repetitive work and make marketing
-        processes more scalable.
-      </p>
+            <br>
+
+            <p>
+                I enjoy working at the point where
+                <strong>creativity, technology and business operations</strong>
+                come together.
+            </p>
+
+        </div>
+
+
+        <div class="reveal">
+
+            <div class="about-stat">
+                <div class="number">04+</div>
+                <p>Years of marketing experience</p>
+            </div>
+
+            <div class="about-stat">
+                <div class="number">80%</div>
+                <p>Reduction in agency dependency for Marketo landing pages</p>
+            </div>
+
+            <div class="about-stat">
+                <div class="number">∞</div>
+                <p>Curiosity for better marketing systems</p>
+            </div>
+
+        </div>
 
     </div>
-
-    <div class="about-highlight">
-
-      <div class="stat">
-        <strong>5+</strong>
-        <span>Years of professional experience</span>
-      </div>
-
-      <div class="stat">
-        <strong>50+</strong>
-        <span>Marketo landing pages developed</span>
-      </div>
-
-      <div class="stat">
-        <strong>100+</strong>
-        <span>B2B email campaigns executed</span>
-      </div>
-
-      <div class="stat">
-        <strong>400+</strong>
-        <span>Website pages supported during migration</span>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
 
 </section>
 
 
-<!-- AI -->
+<!-- EXPERTISE -->
 
-<section id="ai" class="ai-section">
+<section id="expertise">
 
-<div class="container reveal">
+    <div class="section-label">02 — WHAT I BRING</div>
 
-  <div class="section-label">02 — AI × MARKETING</div>
-
-  <h2 class="section-title">
-    Curious about what marketing can do with AI.
-  </h2>
-
-  <p class="section-intro">
-    I don't see AI as a replacement for marketing operations.
-    I see it as a way to remove repetitive work, improve consistency
-    and give marketers more room to focus on the work that actually matters.
-  </p>
-
-  <div class="ai-grid">
-
-    <div class="ai-card">
-      <div class="ai-number">AGENT 01</div>
-
-      <h3>Landing Page Assistant</h3>
-
-      <p>
-        Built a Microsoft Copilot agent to help streamline the landing-page
-        creation workflow, reducing repetitive effort around page creation
-        and improving consistency.
-      </p>
+    <div class="section-title reveal">
+        Skills that connect<br>
+        marketing and technology.
     </div>
 
-    <div class="ai-card">
-      <div class="ai-number">AGENT 02</div>
 
-      <h3>Content Review Assistant</h3>
+    <div class="skills-grid">
 
-      <p>
-        Built a second AI agent focused on content review and workflow
-        support — exploring how AI can improve quality, consistency and
-        efficiency within everyday marketing operations.
-      </p>
+        <div class="skill-card reveal">
+            <div class="skill-icon">⚙</div>
+            <h3>Marketing Operations</h3>
+            <p>
+                Campaign execution, lead management, database segmentation,
+                CRM coordination and marketing processes.
+            </p>
+        </div>
+
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">⚡</div>
+            <h3>Marketing Automation</h3>
+            <p>
+                Marketo programs, workflows, email campaigns, landing pages,
+                lead nurturing and automation processes.
+            </p>
+        </div>
+
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">◉</div>
+            <h3>Website Management</h3>
+            <p>
+                WordPress website management, page creation and optimization,
+                event and webinar pages and digital updates.
+            </p>
+        </div>
+
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">↗</div>
+            <h3>Campaign & Demand Generation</h3>
+            <p>
+                Email marketing, LinkedIn lead generation, audience
+                segmentation and campaign execution.
+            </p>
+        </div>
+
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">⌁</div>
+            <h3>Analytics & Optimization</h3>
+            <p>
+                GA4, SEMrush, campaign performance tracking and
+                data-driven marketing optimization.
+            </p>
+        </div>
+
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">✦</div>
+            <h3>Digital & Creative</h3>
+            <p>
+                Email design, Canva, Photoshop, After Effects and
+                digital asset management.
+            </p>
+        </div>
+
     </div>
-
-  </div>
-
-</div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section id="skills">
-
-<div class="container reveal">
-
-  <div class="section-label">03 — SKILLS</div>
-
-  <h2 class="section-title">
-    Skills that connect marketing and technology.
-  </h2>
-
-  <div class="skills-grid">
-
-    <div class="skill">
-      <div class="skill-number">01</div>
-      <h3>Marketing Operations</h3>
-      <p>
-        Campaign execution, operational coordination, QA, scheduling,
-        deployment and process management.
-      </p>
-    </div>
-
-    <div class="skill">
-      <div class="skill-number">02</div>
-      <h3>Marketing Automation</h3>
-      <p>
-        Adobe Marketo, workflows, campaign operations, audience selection,
-        Smart Lists and automation-oriented processes.
-      </p>
-    </div>
-
-    <div class="skill">
-      <div class="skill-number">03</div>
-      <h3>B2B Campaigns</h3>
-      <p>
-        Email campaigns, HTML/text emails, segmentation, global scheduling,
-        QA and stakeholder-led deployment.
-      </p>
-    </div>
-
-    <div class="skill">
-      <div class="skill-number">04</div>
-      <h3>Website Management</h3>
-      <p>
-        CMS publishing, page updates, website content management,
-        English & Spanish pages and large-scale page migration support.
-      </p>
-    </div>
-
-    <div class="skill">
-      <div class="skill-number">05</div>
-      <h3>CRM & Lead Management</h3>
-      <p>
-        CRM updates, inbound enquiry qualification, lead lifecycle support,
-        database management and opportunity routing.
-      </p>
-    </div>
-
-    <div class="skill">
-      <div class="skill-number">06</div>
-      <h3>Digital Content</h3>
-      <p>
-        Canva, promotional graphics, basic video creation, Adobe Premiere Pro
-        and digital marketing content.
-      </p>
-    </div>
-
-  </div>
-
-</div>
 
 </section>
 
@@ -1064,255 +971,211 @@ footer{
 
 <section id="experience">
 
-<div class="container reveal">
+    <div class="section-label">03 — EXPERIENCE</div>
 
-  <div class="section-label">04 — EXPERIENCE</div>
+    <div class="section-title reveal">
+        Experience that<br>
+        built my foundation.
+    </div>
 
-  <h2 class="section-title">
-    Experience that built my foundation.
-  </h2>
 
-  <p class="section-intro">
-    A progression from marketing support and campaign administration
-    into hands-on marketing operations, automation and digital execution.
-  </p>
+    <div class="timeline">
 
-  <div class="timeline">
+        <div class="timeline-item reveal">
 
-    <div class="job">
+            <div class="timeline-date">MAY 2025 — PRESENT</div>
 
-      <div class="job-date">
-        Jul 2025 — Present
-      </div>
+            <h3>Senior Marketing Executive</h3>
 
-      <div>
+            <div class="timeline-company">
+                Orion Innovation
+            </div>
 
-        <h3>Senior Marketing Specialist</h3>
+            <ul>
+                <li>
+                    Manage end-to-end marketing operations across lead
+                    generation, campaign execution and digital channels.
+                </li>
 
-        <div class="job-role">
-          Marketing Operations · Orion Innovation
+                <li>
+                    Work with Marketo for email programs, landing pages,
+                    workflows, lead scoring and marketing automation.
+                </li>
+
+                <li>
+                    Create Marketo landing pages from scratch and from
+                    templates with minimal agency support.
+                </li>
+
+                <li>
+                    Reduced dependency on external agency support for
+                    Marketo landing-page creation from 100% to approximately
+                    20%.
+                </li>
+
+                <li>
+                    Manage WordPress website updates, page creation,
+                    event and webinar pages and ongoing digital maintenance.
+                </li>
+
+                <li>
+                    Work with GA4 and SEMrush for campaign and website
+                    performance analysis.
+                </li>
+
+                <li>
+                    Collaborate with Sales/CRM teams to maintain lead flow,
+                    database quality and campaign data accuracy.
+                </li>
+            </ul>
+
         </div>
 
-        <ul>
-          <li>
-            Executed 100+ B2B email campaigns in Adobe Marketo including
-            campaign setup, HTML/text email creation, Smart Lists,
-            audience segmentation, QA, scheduling and deployment.
-          </li>
 
-          <li>
-            Developed 50+ Marketo landing pages using templates and
-            independently handled much of the page creation workflow,
-            with agency support reduced to around 20%.
-          </li>
+        <div class="timeline-item reveal">
 
-          <li>
-            Supported the migration and publishing of 400+ website pages
-            during a major corporate website revamp.
-          </li>
+            <div class="timeline-date">APR 2021 — MAY 2022</div>
 
-          <li>
-            Managed English and Spanish website content and CMS publishing.
-          </li>
+            <h3>Marketing Associate — Contract</h3>
 
-          <li>
-            Supported CRM updates, inbound lead qualification and
-            opportunity routing using Microsoft Dynamics 365 and ZoomInfo.
-          </li>
+            <div class="timeline-company">
+                Orion Innovation
+            </div>
 
-          <li>
-            Built AI agents using Microsoft Copilot to explore automation
-            of landing-page creation and content-review workflows.
-          </li>
+            <ul>
+                <li>
+                    Supported campaign execution, email marketing and
+                    lead-management activities.
+                </li>
 
-          <li>
-            Created marketing infographics and basic promotional videos
-            using Canva and Adobe Premiere Pro.
-          </li>
-        </ul>
+                <li>
+                    Assisted with website content updates and marketing
+                    operations.
+                </li>
 
-      </div>
+                <li>
+                    Supported event and digital marketing initiatives.
+                </li>
+            </ul>
+
+        </div>
 
     </div>
 
 
-    <div class="job">
+    <div class="highlight reveal">
 
-      <div class="job-date">
-        May 2022 — Jul 2025
-      </div>
-
-      <div>
-
-        <h3>Marketing Executive</h3>
-
-        <div class="job-role">
-          Orion Innovation
+        <div class="highlight-number">
+            100% → 20%
         </div>
 
-        <ul>
-          <li>
-            Executed email marketing operations, landing-page creation,
-            CRM updates and website content publishing.
-          </li>
+        <div>
+            <h3>Agency dependency reduced</h3>
 
-          <li>
-            Supported lead qualification, database management and
-            campaign coordination.
-          </li>
-
-          <li>
-            Worked with cross-functional teams to support successful
-            campaign delivery and operational efficiency.
-          </li>
-        </ul>
-
-      </div>
-
-    </div>
-
-
-    <div class="job">
-
-      <div class="job-date">
-        Apr 2021 — May 2022
-      </div>
-
-      <div>
-
-        <h3>Marketing Associate</h3>
-
-        <div class="job-role">
-          Orion Innovation
+            <p>
+                Developed the capability to independently create Marketo
+                landing pages from scratch and templates, requiring only
+                limited agency assistance.
+            </p>
         </div>
 
-        <ul>
-          <li>
-            Supported marketing operations, campaign administration,
-            reporting and website updates.
-          </li>
-
-          <li>
-            Assisted with lead tracking and marketing coordination.
-          </li>
-
-          <li>
-            Created basic marketing videos and infographics using Canva
-            and Adobe Premiere Pro.
-          </li>
-        </ul>
-
-      </div>
-
     </div>
-
-  </div>
-
-</div>
 
 </section>
 
 
 <!-- WORK -->
 
-<section>
+<section id="work">
 
-<div class="container reveal">
+    <div class="section-label">04 — SELECTED WORK</div>
 
-  <div class="section-label">05 — WHAT I ENJOY</div>
-
-  <h2 class="section-title">
-    Work I enjoy doing.
-  </h2>
-
-  <div class="work-grid">
-
-    <div class="work-card">
-      <span>01</span>
-      <h3>Building</h3>
-      <p>
-        Creating landing pages, campaigns, digital experiences and
-        practical marketing solutions.
-      </p>
+    <div class="section-title reveal">
+        Work I enjoy doing.
     </div>
 
-    <div class="work-card">
-      <span>02</span>
-      <h3>Optimising</h3>
-      <p>
-        Finding repetitive or inefficient processes and figuring out
-        how they can work better.
-      </p>
+
+    <div class="work-grid">
+
+        <div class="work-card reveal">
+
+            <div class="work-number">01 / AUTOMATION</div>
+
+            <h3>Marketo Landing Pages</h3>
+
+            <p>
+                Built and managed landing pages from existing templates and
+                from scratch, significantly reducing reliance on external
+                agency support.
+            </p>
+
+        </div>
+
+
+        <div class="work-card reveal">
+
+            <div class="work-number">02 / CAMPAIGNS</div>
+
+            <h3>Email & Campaign Operations</h3>
+
+            <p>
+                Supported and executed B2B campaigns across email, web and
+                lead-generation channels, connecting campaign activity with
+                lead management and CRM processes.
+            </p>
+
+        </div>
+
+
+        <div class="work-card reveal">
+
+            <div class="work-number">03 / DIGITAL</div>
+
+            <h3>Website & Digital Operations</h3>
+
+            <p>
+                Managed WordPress pages, event and webinar pages,
+                content updates and digital experiences supporting
+                marketing initiatives.
+            </p>
+
+        </div>
+
     </div>
-
-    <div class="work-card">
-      <span>03</span>
-      <h3>Automating</h3>
-      <p>
-        Using Marketo, AI and automation to reduce manual effort
-        and improve operational consistency.
-      </p>
-    </div>
-
-    <div class="work-card">
-      <span>04</span>
-      <h3>Learning & Exploring</h3>
-      <p>
-        Taking on new challenges, tools and areas of marketing where
-        I can learn, contribute and grow.
-      </p>
-    </div>
-
-  </div>
-
-</div>
 
 </section>
 
 
 <!-- TOOLS -->
 
-<section id="tools">
+<section id="skills">
 
-<div class="container reveal">
+    <div class="section-label">05 — TOOLS & KNOWLEDGE</div>
 
-  <div class="section-label">06 — TOOLS & KNOWLEDGE</div>
+    <div class="section-title reveal">
+        The technology behind<br>
+        my work.
+    </div>
 
-  <h2 class="section-title">
-    The stack behind the work.
-  </h2>
 
-  <p class="section-intro">
-    A practical mix of marketing automation, CRM, research,
-    website, productivity and digital-content tools.
-  </p>
+    <div class="tools reveal">
 
-  <div class="tools-box">
+        <div class="tool">Marketo</div>
+        <div class="tool">HubSpot</div>
+        <div class="tool">Google Analytics 4</div>
+        <div class="tool">WordPress</div>
+        <div class="tool">SEMrush</div>
+        <div class="tool">ZoomInfo</div>
+        <div class="tool">Hootsuite</div>
+        <div class="tool">Canva</div>
+        <div class="tool">Adobe Photoshop</div>
+        <div class="tool">Adobe After Effects</div>
+        <div class="tool">CRM</div>
+        <div class="tool">Marketing Automation</div>
+        <div class="tool">Lead Management</div>
+        <div class="tool">Campaign Operations</div>
 
-    <span class="tool">Adobe Marketo</span>
-    <span class="tool">HubSpot</span>
-    <span class="tool">Microsoft Dynamics 365</span>
-    <span class="tool">ZoomInfo</span>
-    <span class="tool">Microsoft Copilot</span>
-    <span class="tool">Asana</span>
-    <span class="tool">Microsoft Excel</span>
-    <span class="tool">CRM Operations</span>
-    <span class="tool">Smart Lists</span>
-    <span class="tool">Audience Segmentation</span>
-    <span class="tool">Landing Pages</span>
-    <span class="tool">CMS / Website Management</span>
-    <span class="tool">HTML / Text Emails</span>
-    <span class="tool">Campaign Scheduling</span>
-    <span class="tool">Lead Management</span>
-    <span class="tool">Canva</span>
-    <span class="tool">Adobe Premiere Pro</span>
-    <span class="tool">Video Content</span>
-    <span class="tool">Digital Marketing</span>
-    <span class="tool">Marketing Automation</span>
-
-  </div>
-
-</div>
+    </div>
 
 </section>
 
@@ -1321,50 +1184,44 @@ footer{
 
 <section>
 
-<div class="container reveal">
+    <div class="section-label">06 — QUALIFICATIONS</div>
 
-  <div class="section-label">07 — QUALIFICATIONS</div>
+    <div class="qual-grid">
 
-  <h2 class="section-title">
-    Education, certifications & continuous learning.
-  </h2>
+        <div class="qual-card reveal">
 
-  <div class="qual-grid">
+            <h3>Education</h3>
 
-    <div class="qual-card">
+            <p>
+                <strong>Bachelor of Mass Media — Advertising</strong>
+            </p>
 
-      <h3>Education</h3>
+            <p>
+                University of Mumbai
+            </p>
 
-      <p>
-        <strong>Bachelor of Mass Media (Advertising)</strong>
-      </p>
-
-      <p style="margin-top:8px;">
-        R.D. National College, Mumbai
-      </p>
-
-      <p style="margin-top:8px;">
-        2018 — 2021
-      </p>
-
-    </div>
+        </div>
 
 
-    <div class="qual-card">
+        <div class="qual-card reveal">
 
-      <h3>Certifications & Courses</h3>
+            <h3>Professional Development</h3>
 
-      <ul>
-        <li>Digital Marketing Certification</li>
-        <li>Adobe Marketo Course</li>
-        <li>LinkedIn Digital Marketing Course</li>
-      </ul>
+            <p>
+                Currently developing deeper expertise in:
+            </p>
+
+            <ul>
+                <li>Marketing Operations</li>
+                <li>Marketing Automation</li>
+                <li>MarTech</li>
+                <li>Marketing Analytics</li>
+                <li>CRM & Revenue Operations</li>
+            </ul>
+
+        </div>
 
     </div>
-
-  </div>
-
-</div>
 
 </section>
 
@@ -1373,139 +1230,96 @@ footer{
 
 <section id="contact" class="contact">
 
-<div class="container reveal">
+    <div class="section-label">07 — LET'S CONNECT</div>
 
-  <div class="contact-box">
+    <h2 class="reveal">
+        Let's build something<br>
+        meaningful.
+    </h2>
 
-    <div>
+    <p class="reveal">
+        I'm interested in opportunities across Marketing Operations,
+        Marketing Automation, MarTech and Demand Generation.
+    </p>
 
-      <div class="section-label">08 — NEXT OPPORTUNITY</div>
 
-      <h2>
-        Looking for my<br>
-        next <span>challenge.</span>
-      </h2>
+    <div class="contact-links reveal">
 
-      <p class="contact-copy">
-        I'm open to opportunities where marketing operations,
-        automation, MarTech and digital execution come together —
-        and where I can continue learning while creating meaningful impact.
-      </p>
+        <a href="https://www.linkedin.com/" target="_blank"
+           class="btn btn-primary">
+            LinkedIn →
+        </a>
 
-    </div>
-
-    <div class="contact-links">
-
-      <a class="contact-link"
-         href="mailto:adityagnihotri@gmail.com">
-        adityagnihotri@gmail.com
-      </a>
-
-      <a class="contact-link"
-         href="https://www.linkedin.com/in/aditya-agnihotri-mktg/"
-         target="_blank"
-         rel="noopener">
-        LinkedIn ↗
-      </a>
+        <a href="mailto:your-email@example.com"
+           class="btn btn-secondary">
+            Email Me
+        </a>
 
     </div>
-
-  </div>
-
-</div>
 
 </section>
 
-</main>
 
-
-<footer class="container">
-
-  <span>© 2026 Aditya Agnihotri</span>
-
-  <span>Marketing Operations · Automation · MarTech</span>
-
+<footer>
+    © 2026 Aditya Agnihotri · Marketing Operations & Automation
 </footer>
 
 
 <script>
 
-/* SCROLL REVEAL */
+/* Cursor glow */
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add("visible");
-      }
-    });
-  },
-  {threshold:.12}
-);
+const glow = document.getElementById("cursorGlow");
 
-document.querySelectorAll(".reveal").forEach(el => {
-  observer.observe(el);
+document.addEventListener("mousemove", (e) => {
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
 });
 
 
-/* 3D PROFILE CARD */
+/* Scroll reveal */
 
-const scene = document.getElementById("profileScene");
-const card = document.getElementById("profileCard");
+const reveals = document.querySelectorAll(".reveal");
 
-if(scene && card){
+const observer = new IntersectionObserver((entries) => {
 
-  scene.addEventListener("mousemove", e => {
+    entries.forEach(entry => {
 
-    const rect = scene.getBoundingClientRect();
+        if(entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
 
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
+    });
 
-    const rotateY = ((x / rect.width) - .5) * 12;
-    const rotateX = ((y / rect.height) - .5) * -12;
+}, {
+    threshold: 0.12
+});
 
-    card.style.transform =
-      `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(8px)`;
-
-  });
-
-  scene.addEventListener("mouseleave", () => {
-    card.style.transform =
-      "rotateX(0deg) rotateY(0deg) translateZ(0)";
-  });
-
-}
+reveals.forEach(el => observer.observe(el));
 
 
-/* ACTIVE NAV */
+/* Subtle 3D tilt on cards */
 
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".navlinks a");
+document.querySelectorAll(".skill-card, .work-card, .about-stat").forEach(card => {
 
-window.addEventListener("scroll", () => {
+    card.addEventListener("mousemove", (e) => {
 
-  let current = "";
+        const rect = card.getBoundingClientRect();
 
-  sections.forEach(section => {
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
 
-    const top = section.offsetTop - 180;
+        const rotateX = ((y / rect.height) - .5) * -5;
+        const rotateY = ((x / rect.width) - .5) * 5;
 
-    if(window.scrollY >= top){
-      current = section.getAttribute("id");
-    }
+        card.style.transform =
+            `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
 
-  });
+    });
 
-  navLinks.forEach(link => {
-
-    link.style.color = "";
-
-    if(link.getAttribute("href") === "#" + current){
-      link.style.color = "#a5ff3f";
-    }
-
-  });
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "";
+    });
 
 });
 
