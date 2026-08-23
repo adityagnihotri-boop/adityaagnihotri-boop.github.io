@@ -4,1640 +4,1508 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aditya Agnihotri — Marketing Operations & Automation</title>
+<title>Aditya Agnihotri | Senior Marketing Executive</title>
 
-<meta name="description" content="Aditya Agnihotri — Senior Marketing Executive focused on Marketing Operations, Marketing Automation, MarTech and B2B digital execution.">
+<meta name="description"
+content="Aditya Agnihotri — Senior Marketing Executive specializing in Marketing Operations, Marketing Automation, MarTech and digital execution.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
-:root {
-    --bg: #08090c;
-    --bg2: #0d0f14;
-    --card: rgba(255,255,255,0.045);
-    --card-hover: rgba(255,255,255,0.075);
-    --line: rgba(255,255,255,0.10);
-    --text: #f4f5f7;
-    --muted: #969ba7;
-    --soft: #c8ccd4;
-    --accent: #b7ff5a;
-    --accent2: #82a9ff;
-    --max: 1180px;
+:root{
+  --bg:#080a0f;
+  --bg2:#0d1017;
+  --card:#11151d;
+  --card2:#151a23;
+  --text:#f3f5f7;
+  --muted:#9299a8;
+  --line:rgba(255,255,255,.10);
+  --accent:#a5ff3f;
+  --accent2:#75c72c;
+  --purple:#9b7cff;
+  --cyan:#56d9ff;
+  --max:1200px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-    background:
-        radial-gradient(circle at 80% 10%, rgba(130,169,255,.10), transparent 28%),
-        radial-gradient(circle at 10% 40%, rgba(183,255,90,.055), transparent 25%),
-        var(--bg);
-    color: var(--text);
-    font-family: "DM Sans", sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
+body{
+  background:
+    radial-gradient(circle at 75% 10%,rgba(165,255,63,.055),transparent 30%),
+    radial-gradient(circle at 15% 50%,rgba(155,124,255,.04),transparent 30%),
+    var(--bg);
+  color:var(--text);
+  font-family:"DM Sans",sans-serif;
+  line-height:1.6;
+  overflow-x:hidden;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+  z-index:999;
 }
 
-::selection {
-    background: var(--accent);
-    color: #08090c;
+a{
+  color:inherit;
+  text-decoration:none;
 }
 
-/* =========================
-   CURSOR GLOW
-========================= */
-
-.cursor-glow {
-    position: fixed;
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    pointer-events: none;
-    background: radial-gradient(circle, rgba(183,255,90,.055), transparent 68%);
-    transform: translate(-50%, -50%);
-    z-index: 0;
+.container{
+  width:min(var(--max),calc(100% - 48px));
+  margin:auto;
 }
 
-/* =========================
-   NAV
-========================= */
+nav{
+  position:fixed;
+  top:18px;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(1200px,calc(100% - 48px));
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 22px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:rgba(8,10,15,.76);
+  backdrop-filter:blur(18px);
+  z-index:100;
+}
 
-nav {
-    position: fixed;
-    top: 18px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(94%, 1120px);
-    padding: 12px 18px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(8,9,12,.70);
-    backdrop-filter: blur(18px);
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    z-index: 100;
+.logo{
+  font-family:"Space Grotesk";
+  font-weight:700;
+  font-size:20px;
+  letter-spacing:-.8px;
 }
 
-.logo {
-    font-family: "Space Grotesk";
-    font-weight: 700;
-    letter-spacing: -.04em;
+.logo span{
+  color:var(--accent);
 }
 
-.logo span {
-    color: var(--accent);
+.navlinks{
+  display:flex;
+  gap:34px;
+  color:#9ca3b2;
+  font-size:14px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 25px;
-    font-size: 13px;
-    color: var(--muted);
+.navlinks a{
+  transition:.25s;
 }
 
-.nav-links a {
-    transition: .25s;
+.navlinks a:hover{
+  color:white;
 }
 
-.nav-links a:hover {
-    color: var(--text);
+.navbutton{
+  border:1px solid var(--line);
+  padding:11px 18px;
+  border-radius:14px;
+  transition:.25s;
 }
 
-.nav-btn {
-    padding: 8px 14px;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    font-size: 12px;
+.navbutton:hover{
+  border-color:var(--accent);
+  color:var(--accent);
 }
 
-/* =========================
-   GENERAL
-========================= */
+/* HERO */
 
-section {
-    width: min(92%, var(--max));
-    margin: auto;
-    position: relative;
-    z-index: 2;
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  align-items:center;
+  gap:50px;
+  padding-top:90px;
 }
 
-.section {
-    padding: 110px 0;
+.eyebrow{
+  color:var(--accent);
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:24px;
 }
 
-.eyebrow {
-    color: var(--accent);
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: .18em;
-    font-weight: 700;
-    margin-bottom: 15px;
+.hero h1{
+  font-family:"Space Grotesk";
+  font-size:clamp(58px,7.2vw,104px);
+  line-height:.91;
+  letter-spacing:-5px;
+  max-width:780px;
 }
 
-h1, h2, h3 {
-    font-family: "Space Grotesk", sans-serif;
-    line-height: 1.05;
-    letter-spacing: -.045em;
+.hero h1 .green{
+  color:var(--accent);
 }
 
-h2 {
-    font-size: clamp(38px, 5vw, 64px);
-    margin-bottom: 22px;
+.hero-copy{
+  margin-top:30px;
+  color:var(--muted);
+  font-size:17px;
+  max-width:610px;
 }
 
-.section-intro {
-    max-width: 680px;
-    color: var(--muted);
-    font-size: 17px;
+.hero-actions{
+  display:flex;
+  gap:14px;
+  margin-top:32px;
+  flex-wrap:wrap;
 }
-
-/* =========================
-   HERO
-========================= */
 
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-top: 100px;
+.btn{
+  padding:14px 20px;
+  border-radius:13px;
+  border:1px solid var(--line);
+  font-weight:600;
+  font-size:14px;
+  transition:.25s;
 }
 
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.25fr .75fr;
-    gap: 70px;
-    align-items: center;
+.btn.primary{
+  background:var(--accent);
+  color:#0a0d09;
+  border-color:var(--accent);
 }
 
-.hero h1 {
-    font-size: clamp(52px, 7vw, 94px);
-    max-width: 900px;
+.btn.primary:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 35px rgba(165,255,63,.18);
 }
 
-.hero h1 .accent {
-    color: var(--accent);
+.btn.secondary:hover{
+  border-color:#777f90;
 }
 
-.hero-subtitle {
-    margin-top: 28px;
-    font-size: 18px;
-    color: var(--soft);
-    max-width: 700px;
+/* PROFILE CARD */
+
+.visual{
+  height:570px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  perspective:1000px;
 }
 
-.hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 25px;
+.profile-scene{
+  position:relative;
+  width:410px;
+  height:500px;
+  transform-style:preserve-3d;
 }
 
-.tag {
-    padding: 8px 13px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    color: var(--muted);
-    font-size: 12px;
-    background: rgba(255,255,255,.025);
+.orbit{
+  position:absolute;
+  inset:20px -30px;
+  border:1px solid rgba(165,255,63,.28);
+  border-radius:38px;
+  transform:rotate(7deg);
 }
 
-.hero-actions {
-    display: flex;
-    gap: 12px;
-    margin-top: 35px;
-    flex-wrap: wrap;
+.orbit.two{
+  inset:55px -5px;
+  border-color:rgba(86,217,255,.16);
+  transform:rotate(-7deg);
 }
 
-.btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 13px 18px;
-    border-radius: 12px;
-    border: 1px solid var(--line);
-    font-size: 13px;
-    font-weight: 600;
-    transition: .25s;
+.profile-card{
+  position:absolute;
+  inset:40px 10px 20px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:28px;
+  background:linear-gradient(145deg,#202630,#11151d);
+  padding:24px;
+  box-shadow:0 40px 100px rgba(0,0,0,.45);
+  transform-style:preserve-3d;
+  transition:transform .15s ease-out;
 }
 
-.btn-primary {
-    background: var(--accent);
-    color: #08090c;
-    border-color: var(--accent);
+.photo-wrap{
+  height:350px;
+  border-radius:20px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#252d39,#131923);
+  position:relative;
 }
 
-.btn:hover {
-    transform: translateY(-3px);
+.photo-wrap::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,.45),transparent 45%);
 }
 
-.hero-card {
-    position: relative;
-    height: 470px;
-    perspective: 1000px;
+.photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
 }
 
-.profile-orbit {
-    position: absolute;
-    inset: 25px;
-    border: 1px solid rgba(183,255,90,.20);
-    border-radius: 32px;
-    transform: rotate(7deg);
+.profile-info{
+  margin-top:20px;
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
 }
 
-.profile-orbit::after {
-    content: "";
-    position: absolute;
-    inset: 35px;
-    border: 1px solid rgba(130,169,255,.18);
-    border-radius: 26px;
-    transform: rotate(-14deg);
+.profile-info h3{
+  font-family:"Space Grotesk";
+  font-size:25px;
 }
 
-.profile-card {
-    position: absolute;
-    inset: 65px 35px;
-    background: linear-gradient(145deg, rgba(255,255,255,.09), rgba(255,255,255,.025));
-    border: 1px solid var(--line);
-    border-radius: 28px;
-    padding: 28px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 35px 100px rgba(0,0,0,.45);
-    transform-style: preserve-3d;
-    transition: transform .15s ease-out;
+.profile-info p{
+  color:var(--muted);
+  font-size:13px;
 }
 
-.profile-photo {
-    width: 100%;
-    height: 260px;
-    border-radius: 20px;
-    overflow: hidden;
-    background:
-        linear-gradient(145deg, rgba(183,255,90,.18), rgba(130,169,255,.12)),
-        #151820;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--muted);
-    font-size: 12px;
+.status{
+  width:11px;
+  height:11px;
+  background:var(--accent);
+  border-radius:50%;
+  box-shadow:0 0 18px var(--accent);
+  margin-bottom:7px;
 }
 
-.profile-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* SECTIONS */
+
+section{
+  padding:120px 0;
 }
 
-.profile-info {
-    margin-top: 18px;
+.section-label{
+  color:var(--accent);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-bottom:16px;
 }
 
-.profile-info strong {
-    font-family: "Space Grotesk";
-    font-size: 20px;
+.section-title{
+  font-family:"Space Grotesk";
+  font-size:clamp(38px,5vw,64px);
+  line-height:1;
+  letter-spacing:-3px;
+  max-width:750px;
 }
 
-.profile-info p {
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 3px;
+.section-intro{
+  color:var(--muted);
+  max-width:680px;
+  margin-top:22px;
+  font-size:17px;
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
-.about-grid {
-    display: grid;
-    grid-template-columns: .7fr 1.3fr;
-    gap: 90px;
+.about-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:80px;
+  margin-top:60px;
 }
 
-.about-copy {
-    font-size: 20px;
-    color: var(--soft);
-    max-width: 760px;
+.about-text{
+  color:#c3c8d2;
+  font-size:18px;
 }
 
-.about-copy p + p {
-    margin-top: 20px;
+.about-text p+p{
+  margin-top:20px;
 }
 
-.about-highlight {
-    margin-top: 30px;
-    padding: 22px;
-    border-left: 2px solid var(--accent);
-    background: rgba(183,255,90,.035);
-    color: var(--muted);
+.about-highlight{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
 }
-
-/* =========================
-   STATS
-========================= */
 
-.stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-top: 50px;
+.stat{
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:28px;
+  background:rgba(255,255,255,.025);
+  transition:.3s;
 }
 
-.stat {
-    padding: 28px;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    background: var(--card);
+.stat:hover{
+  transform:translateY(-5px);
+  border-color:rgba(165,255,63,.35);
 }
 
-.stat-number {
-    font-family: "Space Grotesk";
-    font-size: 42px;
-    font-weight: 700;
-    color: var(--text);
+.stat strong{
+  display:block;
+  color:var(--accent);
+  font-family:"Space Grotesk";
+  font-size:38px;
+  margin-bottom:6px;
 }
 
-.stat-label {
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 4px;
+.stat span{
+  color:var(--muted);
+  font-size:13px;
 }
 
-/* =========================
-   AI AGENTS
-========================= */
+/* AI */
 
-.ai-section {
-    position: relative;
-    overflow: hidden;
+.ai-section{
+  position:relative;
 }
 
-.ai-section::before {
-    content: "AI";
-    position: absolute;
-    right: -40px;
-    top: 50px;
-    font-family: "Space Grotesk";
-    font-size: 260px;
-    font-weight: 700;
-    color: rgba(255,255,255,.018);
-    pointer-events: none;
+.ai-grid{
+  margin-top:55px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
 }
 
-.agent-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-    margin-top: 45px;
+.ai-card{
+  padding:34px;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:linear-gradient(145deg,rgba(155,124,255,.08),rgba(255,255,255,.025));
+  transition:.35s;
 }
 
-.agent-card {
-    padding: 34px;
-    min-height: 280px;
-    border: 1px solid var(--line);
-    border-radius: 25px;
-    background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.02));
-    transition: .35s;
-    transform-style: preserve-3d;
+.ai-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(155,124,255,.45);
 }
 
-.agent-card:hover {
-    transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
-    background: var(--card-hover);
-    border-color: rgba(183,255,90,.25);
+.ai-number{
+  font-family:"Space Grotesk";
+  color:var(--purple);
+  font-size:13px;
+  letter-spacing:2px;
 }
 
-.agent-number {
-    color: var(--accent);
-    font-family: "Space Grotesk";
-    font-size: 12px;
-    letter-spacing: .15em;
+.ai-card h3{
+  font-family:"Space Grotesk";
+  font-size:28px;
+  margin:28px 0 12px;
 }
 
-.agent-card h3 {
-    font-size: 30px;
-    margin: 35px 0 15px;
+.ai-card p{
+  color:var(--muted);
 }
 
-.agent-card p {
-    color: var(--muted);
-}
+/* SKILLS */
 
-/* =========================
-   SKILLS
-========================= */
-
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-top: 50px;
+.skills-grid{
+  margin-top:55px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
 }
 
-.skill-card {
-    min-height: 240px;
-    padding: 28px;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    background: var(--card);
-    transition: .3s;
+.skill{
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:24px;
+  background:rgba(255,255,255,.025);
+  transition:.3s;
 }
 
-.skill-card:hover {
-    transform: translateY(-5px);
-    background: var(--card-hover);
+.skill:hover{
+  transform:translateY(-5px);
+  border-color:rgba(165,255,63,.35);
 }
 
-.skill-icon {
-    font-size: 22px;
-    margin-bottom: 30px;
-    color: var(--accent);
+.skill-number{
+  color:var(--accent);
+  font-size:12px;
+  font-weight:700;
 }
 
-.skill-card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+.skill h3{
+  font-family:"Space Grotesk";
+  margin:14px 0 8px;
+  font-size:20px;
 }
 
-.skill-card p {
-    color: var(--muted);
-    font-size: 14px;
+.skill p{
+  color:var(--muted);
+  font-size:14px;
 }
+
+/* EXPERIENCE */
 
-/* =========================
-   EXPERIENCE
-========================= */
+.timeline{
+  margin-top:65px;
+  position:relative;
+}
 
-.timeline {
-    margin-top: 60px;
-    border-left: 1px solid var(--line);
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:85px;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:var(--line);
 }
 
-.role {
-    position: relative;
-    padding: 0 0 70px 45px;
+.job{
+  display:grid;
+  grid-template-columns:170px 1fr;
+  gap:55px;
+  padding:0 0 60px;
+  position:relative;
 }
 
-.role::before {
-    content: "";
-    position: absolute;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: var(--accent);
-    left: -6px;
-    top: 6px;
-    box-shadow: 0 0 25px rgba(183,255,90,.35);
+.job-date{
+  color:var(--muted);
+  font-size:13px;
+  padding-top:5px;
 }
 
-.role-date {
-    color: var(--accent);
-    font-size: 12px;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+.job-date::after{
+  content:"";
+  position:absolute;
+  left:80px;
+  top:7px;
+  width:11px;
+  height:11px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 5px var(--bg);
 }
 
-.role h3 {
-    font-size: 31px;
-    margin: 10px 0 4px;
+.job h3{
+  font-family:"Space Grotesk";
+  font-size:27px;
 }
 
-.role-company {
-    color: var(--soft);
-    font-size: 14px;
-    margin-bottom: 20px;
+.job-role{
+  color:var(--accent);
+  font-size:13px;
+  margin:4px 0 18px;
 }
 
-.role ul {
-    list-style: none;
-    display: grid;
-    gap: 10px;
+.job ul{
+  list-style:none;
+  color:#aeb5c2;
 }
 
-.role li {
-    color: var(--muted);
-    padding-left: 20px;
-    position: relative;
+.job li{
+  margin:10px 0;
+  padding-left:20px;
+  position:relative;
 }
 
-.role li::before {
-    content: "→";
-    position: absolute;
-    left: 0;
-    color: var(--accent);
+.job li::before{
+  content:"→";
+  color:var(--accent);
+  position:absolute;
+  left:0;
 }
 
-/* =========================
-   WORK I ENJOY
-========================= */
+/* WORK */
+
+.work-grid{
+  margin-top:55px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
 
-.work-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 14px;
-    margin-top: 45px;
+.work-card{
+  min-height:220px;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:25px;
+  background:rgba(255,255,255,.025);
+  transition:.3s;
 }
 
-.work-item {
-    padding: 28px;
-    border-top: 1px solid var(--line);
+.work-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(165,255,63,.35);
 }
 
-.work-item span {
-    color: var(--accent);
-    font-size: 11px;
-    letter-spacing: .12em;
+.work-card span{
+  color:var(--accent);
+  font-size:12px;
 }
 
-.work-item h3 {
-    font-size: 22px;
-    margin: 20px 0 12px;
+.work-card h3{
+  font-family:"Space Grotesk";
+  margin:25px 0 10px;
+  font-size:21px;
 }
 
-.work-item p {
-    color: var(--muted);
-    font-size: 13px;
+.work-card p{
+  color:var(--muted);
+  font-size:14px;
 }
 
-/* =========================
-   TOOLS
-========================= */
+/* TOOLS */
 
-.tools-layout {
-    display: grid;
-    grid-template-columns: .7fr 1.3fr;
-    gap: 80px;
+.tools-box{
+  margin-top:55px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
 }
 
-.tool-group {
-    margin-bottom: 30px;
+.tool{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.025);
+  padding:13px 18px;
+  border-radius:100px;
+  color:#c9ced8;
+  font-size:14px;
+  transition:.25s;
 }
 
-.tool-group h3 {
-    font-size: 14px;
-    color: var(--soft);
-    margin-bottom: 13px;
+.tool:hover{
+  color:var(--accent);
+  border-color:rgba(165,255,63,.45);
 }
 
-.tool-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
+/* QUALIFICATIONS */
+
+.qual-grid{
+  margin-top:55px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.qual-card{
+  padding:30px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  background:rgba(255,255,255,.025);
 }
 
-.tool {
-    padding: 9px 12px;
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    font-size: 12px;
-    color: var(--muted);
+.qual-card h3{
+  font-family:"Space Grotesk";
+  margin-bottom:20px;
+  font-size:22px;
 }
 
-/* =========================
-   EDUCATION
-========================= */
+.qual-card p,
+.qual-card li{
+  color:var(--muted);
+  font-size:15px;
+}
 
-.edu-card {
-    margin-top: 45px;
-    padding: 35px;
-    border: 1px solid var(--line);
-    border-radius: 24px;
-    background: var(--card);
+.qual-card ul{
+  list-style:none;
 }
 
-.edu-card h3 {
-    font-size: 28px;
+.qual-card li{
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
 
-.edu-card p {
-    color: var(--muted);
-    margin-top: 8px;
+.qual-card li:last-child{
+  border-bottom:0;
 }
 
-.certificates {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 13px;
-    margin-top: 18px;
+/* CONTACT */
+
+.contact{
+  padding-bottom:70px;
 }
 
-.certificate {
-    padding: 20px;
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    color: var(--soft);
-    background: rgba(255,255,255,.025);
+.contact-box{
+  border:1px solid var(--line);
+  border-radius:30px;
+  padding:60px;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(165,255,63,.09),transparent 30%),
+    rgba(255,255,255,.025);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
 }
 
-/* =========================
-   CONTACT
-========================= */
+.contact h2{
+  font-family:"Space Grotesk";
+  font-size:clamp(38px,5vw,68px);
+  line-height:1;
+  letter-spacing:-3px;
+}
 
-.contact {
-    padding: 130px 0 80px;
+.contact h2 span{
+  color:var(--accent);
 }
 
-.contact-box {
-    padding: 65px;
-    border: 1px solid var(--line);
-    border-radius: 30px;
-    background:
-        radial-gradient(circle at 90% 20%, rgba(130,169,255,.12), transparent 35%),
-        radial-gradient(circle at 10% 90%, rgba(183,255,90,.08), transparent 30%),
-        rgba(255,255,255,.035);
+.contact-copy{
+  color:var(--muted);
+  max-width:550px;
+  margin-top:18px;
 }
 
-.contact-box h2 {
-    max-width: 800px;
+.contact-links{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  min-width:250px;
 }
 
-.contact-box p {
-    color: var(--muted);
-    max-width: 650px;
-    font-size: 17px;
+.contact-link{
+  padding:15px 18px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  transition:.25s;
 }
 
-.contact-links {
-    display: flex;
-    gap: 12px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+.contact-link:hover{
+  border-color:var(--accent);
+  color:var(--accent);
 }
 
-footer {
-    width: min(92%, var(--max));
-    margin: auto;
-    padding: 25px 0 35px;
-    border-top: 1px solid var(--line);
-    color: var(--muted);
-    font-size: 11px;
-    display: flex;
-    justify-content: space-between;
+footer{
+  border-top:1px solid var(--line);
+  padding:25px 0;
+  color:#646b79;
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
 }
 
-/* =========================
-   REVEAL
-========================= */
+/* REVEAL */
 
-.reveal {
-    opacity: 0;
-    transform: translateY(25px);
-    transition: opacity .8s ease, transform .8s ease;
+.reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:opacity .8s ease,transform .8s ease;
 }
 
-.reveal.visible {
-    opacity: 1;
-    transform: translateY(0);
+.reveal.visible{
+  opacity:1;
+  transform:none;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* RESPONSIVE */
 
-@media(max-width: 900px) {
+@media(max-width:900px){
 
-    .nav-links {
-        display: none;
-    }
+  .navlinks{
+    display:none;
+  }
 
-    .hero-grid,
-    .about-grid,
-    .tools-layout {
-        grid-template-columns: 1fr;
-    }
+  .hero{
+    grid-template-columns:1fr;
+    padding-top:130px;
+  }
 
-    .hero {
-        padding-top: 140px;
-    }
+  .visual{
+    height:500px;
+  }
 
-    .hero-card {
-        height: 430px;
-    }
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
 
-    .stats,
-    .skill-grid,
-    .work-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .skills-grid{
+    grid-template-columns:1fr 1fr;
+  }
 
-    .agent-grid,
-    .certificates {
-        grid-template-columns: 1fr;
-    }
+  .work-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .contact-box{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
 }
+
+@media(max-width:600px){
+
+  .container{
+    width:min(100% - 30px,var(--max));
+  }
+
+  nav{
+    width:calc(100% - 24px);
+  }
+
+  .hero h1{
+    font-size:58px;
+    letter-spacing:-3px;
+  }
 
-@media(max-width: 560px) {
+  .visual{
+    transform:scale(.85);
+    margin-left:-30px;
+  }
 
-    .section {
-        padding: 80px 0;
-    }
+  .skills-grid,
+  .work-grid,
+  .ai-grid,
+  .qual-grid{
+    grid-template-columns:1fr;
+  }
 
-    .hero h1 {
-        font-size: 50px;
-    }
+  .timeline::before{
+    display:none;
+  }
 
-    .stats,
-    .skill-grid,
-    .work-grid {
-        grid-template-columns: 1fr;
-    }
+  .job{
+    grid-template-columns:1fr;
+    gap:8px;
+  }
 
-    .profile-card {
-        inset: 50px 15px;
-    }
+  .job-date::after{
+    display:none;
+  }
 
-    .contact-box {
-        padding: 30px;
-    }
+  .contact-box{
+    padding:35px 25px;
+  }
 
-    footer {
-        flex-direction: column;
-        gap: 8px;
-    }
+  footer{
+    flex-direction:column;
+    gap:10px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<div class="cursor-glow"></div>
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
 <nav>
-    <a href="#top" class="logo">ADITYA<span>.</span></a>
+  <a class="logo" href="#top">ADITYA<span>.</span></a>
 
-    <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#ai">AI</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#tools">Tools</a>
-    </div>
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#ai">AI</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#tools">Tools</a>
+  </div>
 
-    <a class="nav-btn" href="#contact">Let's Talk</a>
+  <a class="navbutton" href="#contact">Let's Talk</a>
 </nav>
 
+<main id="top">
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
-<section class="hero" id="top">
+<section class="hero container">
 
-    <div class="hero-grid">
+  <div class="reveal">
 
-        <div class="reveal">
-
-            <div class="eyebrow">
-                Marketing Operations × Automation × MarTech
-            </div>
-
-            <h1>
-                SENIOR MARKETING EXECUTIVE
-                <br>
-                <span class="accent">MARKETING OPERATIONS</span>
-                <br>
-                & AUTOMATION
-            </h1>
-
-            <p class="hero-subtitle">
-                Building smarter B2B marketing operations through
-                campaign execution, automation, digital experiences,
-                CRM processes and AI-assisted workflows.
-            </p>
-
-            <div class="hero-tags">
-                <span class="tag">B2B Marketing</span>
-                <span class="tag">Marketing Automation</span>
-                <span class="tag">Adobe Marketo</span>
-                <span class="tag">MarTech</span>
-                <span class="tag">AI Workflows</span>
-            </div>
-
-            <div class="hero-actions">
-                <a href="#experience" class="btn btn-primary">
-                    Explore my experience →
-                </a>
-
-                <a href="https://www.linkedin.com/in/aditya-agnihotri-mktg/"
-                   target="_blank"
-                   class="btn">
-                    LinkedIn ↗
-                </a>
-            </div>
-
-        </div>
-
-
-        <div class="hero-card reveal" id="tiltCard">
-
-            <div class="profile-orbit"></div>
-
-            <div class="profile-card">
-
-                <div class="profile-photo">
-
-                    <!--
-                    PUT YOUR PHOTO IN THE SAME GITHUB FOLDER
-                    AND NAME IT:
-
-                    profile.jpg
-
-                    -->
-
-                    <img src="profile.jpg"
-                         alt="Aditya Agnihotri"
-                         onerror="this.style.display='none'; this.parentElement.innerHTML='<span>ADITYA AGNIHOTRI</span>';">
-                </div>
-
-                <div class="profile-info">
-                    <strong>Aditya Agnihotri</strong>
-                    <p>Marketing Operations & Automation</p>
-                    <p>Pune, India</p>
-                </div>
-
-            </div>
-
-        </div>
-
+    <div class="eyebrow">
+      Senior Marketing Executive · Marketing Operations · Marketing Automation
     </div>
 
-</section>
+    <h1>
+      MARKETING<br>
+      THAT RUNS<br>
+      <span class="green">SMARTER.</span>
+    </h1>
 
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section class="section reveal" id="about">
-
-    <div class="about-grid">
-
-        <div>
-            <div class="eyebrow">01 — About Me</div>
-            <h2>
-                Marketing meets
-                technology.
-            </h2>
-        </div>
-
-        <div class="about-copy">
-
-            <p>
-                I build and manage the systems behind modern B2B marketing.
-            </p>
-
-            <p>
-                With 5+ years of experience across Marketing Operations,
-                Marketing Automation and digital execution, I've worked
-                across the campaign lifecycle — from audience selection
-                and email deployment to landing pages, website publishing,
-                CRM operations and lead management.
-            </p>
-
-            <p>
-                My recent work has increasingly focused on using
-                <strong>automation and AI</strong> to make marketing
-                processes faster, more consistent and scalable.
-            </p>
-
-            <div class="about-highlight">
-                I enjoy taking a marketing requirement, understanding
-                the process behind it, and finding a smarter way to execute it.
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="stats">
-
-        <div class="stat">
-            <div class="stat-number">5+</div>
-            <div class="stat-label">Years of experience</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">B2B campaigns</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-number">2K+</div>
-            <div class="stat-label">Marketing leads contributed</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Website pages supported</div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     AI AGENTS
-========================= -->
-
-<section class="section ai-section reveal" id="ai">
-
-    <div class="eyebrow">02 — AI × Marketing Operations</div>
-
-    <h2>
-        Turning repetitive
-        work into smarter workflows.
-    </h2>
-
-    <p class="section-intro">
-        Two Microsoft Copilot agents built to improve the efficiency,
-        consistency and scalability of marketing operations.
+    <p class="hero-copy">
+      I work across marketing operations, automation, MarTech and digital execution —
+      turning campaign requirements into organised, scalable and effective marketing workflows.
     </p>
 
+    <div class="hero-actions">
+      <a href="#experience" class="btn primary">Explore my experience</a>
+      <a href="#contact" class="btn secondary">View contact</a>
+    </div>
 
-    <div class="agent-grid">
+  </div>
 
-        <div class="agent-card">
+  <div class="visual reveal">
 
-            <div class="agent-number">AGENT 01</div>
+    <div class="profile-scene" id="profileScene">
 
-            <h3>
-                Landing Page
-                Content Assistant
-            </h3>
+      <div class="orbit"></div>
+      <div class="orbit two"></div>
 
-            <p>
-                Converts approved marketing content and Word documents
-                into brand-aligned landing page drafts, helping reduce
-                repetitive manual work during campaign preparation.
-            </p>
+      <div class="profile-card" id="profileCard">
 
+        <div class="photo-wrap">
+          <img src="profile.jpg" class="photo" alt="Aditya Agnihotri">
         </div>
 
-
-        <div class="agent-card">
-
-            <div class="agent-number">AGENT 02</div>
-
-            <h3>
-                Landing Page
-                Review Assistant
-            </h3>
-
-            <p>
-                Evaluates content against brand guidelines and provides
-                Green / Yellow / Red readiness recommendations with
-                actionable improvement suggestions before publishing.
-            </p>
-
+        <div class="profile-info">
+          <div>
+            <h3>Aditya Agnihotri</h3>
+            <p>Marketing Operations & Automation</p>
+          </div>
+          <div class="status"></div>
         </div>
+
+      </div>
 
     </div>
+
+  </div>
 
 </section>
 
 
-<!-- =========================
-     SKILLS
-========================= -->
+<!-- ABOUT -->
 
-<section class="section reveal" id="skills">
+<section id="about">
 
-    <div class="eyebrow">03 — What I Bring</div>
+<div class="container reveal">
 
-    <h2>
-        Skills that connect
-        marketing and technology.
-    </h2>
+  <div class="section-label">01 — ABOUT</div>
 
-    <p class="section-intro">
-        A blend of marketing execution, technology, digital operations
-        and process thinking.
-    </p>
+  <h2 class="section-title">
+    Marketing operations is where marketing meets execution.
+  </h2>
 
+  <div class="about-grid">
 
-    <div class="skill-grid">
+    <div class="about-text">
 
-        <div class="skill-card">
-            <div class="skill-icon">01</div>
-            <h3>Marketing Operations</h3>
-            <p>
-                Campaign execution, lead management, CRM operations,
-                process coordination and operational efficiency.
-            </p>
-        </div>
+      <p>
+        I'm a marketing professional with 5+ years of experience across
+        marketing operations, B2B campaign execution, marketing automation,
+        website management, CRM operations and lead management.
+      </p>
 
+      <p>
+        My work sits close to the execution layer of marketing — building
+        campaigns, managing audiences, publishing digital experiences,
+        maintaining operational processes and helping teams move from
+        requirement to execution efficiently.
+      </p>
 
-        <div class="skill-card">
-            <div class="skill-icon">02</div>
-            <h3>Marketing Automation</h3>
-            <p>
-                Adobe Marketo, email programs, Smart Lists,
-                landing pages, workflows and campaign deployment.
-            </p>
-        </div>
-
-
-        <div class="skill-card">
-            <div class="skill-icon">03</div>
-            <h3>B2B Campaign Management</h3>
-            <p>
-                Email creation, audience segmentation, QA,
-                scheduling, deployment and stakeholder coordination.
-            </p>
-        </div>
-
-
-        <div class="skill-card">
-            <div class="skill-icon">04</div>
-            <h3>Website & CMS</h3>
-            <p>
-                Website publishing, CMS templates, landing pages,
-                English and Spanish content and large-scale migration.
-            </p>
-        </div>
-
-
-        <div class="skill-card">
-            <div class="skill-icon">05</div>
-            <h3>CRM & Lead Management</h3>
-            <p>
-                Microsoft Dynamics 365, inbound qualification,
-                lead lifecycle activities and opportunity routing.
-            </p>
-        </div>
-
-
-        <div class="skill-card">
-            <div class="skill-icon">06</div>
-            <h3>Digital & Creative</h3>
-            <p>
-                Marketing infographics, video creation, Canva,
-                Adobe Premiere Pro and HTML/text email content.
-            </p>
-        </div>
+      <p>
+        Alongside the operational side, I've developed an interest in using
+        AI and automation to remove repetitive work and make marketing
+        processes more scalable.
+      </p>
 
     </div>
+
+    <div class="about-highlight">
+
+      <div class="stat">
+        <strong>5+</strong>
+        <span>Years of professional experience</span>
+      </div>
+
+      <div class="stat">
+        <strong>50+</strong>
+        <span>Marketo landing pages developed</span>
+      </div>
+
+      <div class="stat">
+        <strong>100+</strong>
+        <span>B2B email campaigns executed</span>
+      </div>
+
+      <div class="stat">
+        <strong>400+</strong>
+        <span>Website pages supported during migration</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     EXPERIENCE
-========================= -->
+<!-- AI -->
 
-<section class="section reveal" id="experience">
+<section id="ai" class="ai-section">
 
-    <div class="eyebrow">04 — Experience</div>
+<div class="container reveal">
 
-    <h2>
-        Experience that
-        built my foundation.
-    </h2>
+  <div class="section-label">02 — AI × MARKETING</div>
 
-    <p class="section-intro">
-        From marketing administration to owning complex marketing
-        operations and automation workflows.
-    </p>
+  <h2 class="section-title">
+    Curious about what marketing can do with AI.
+  </h2>
 
+  <p class="section-intro">
+    I don't see AI as a replacement for marketing operations.
+    I see it as a way to remove repetitive work, improve consistency
+    and give marketers more room to focus on the work that actually matters.
+  </p>
 
-    <div class="timeline">
+  <div class="ai-grid">
 
+    <div class="ai-card">
+      <div class="ai-number">AGENT 01</div>
 
-        <!-- SENIOR -->
+      <h3>Landing Page Assistant</h3>
 
-        <div class="role">
-
-            <div class="role-date">
-                Jul 2025 — Present
-            </div>
-
-            <h3>
-                Senior Marketing Specialist
-            </h3>
-
-            <div class="role-company">
-                Orion Innovation · Marketing Operations
-            </div>
-
-            <ul>
-
-                <li>
-                    Executed 50+ B2B email campaigns in Adobe Marketo,
-                    contributing to 2,000+ marketing leads through
-                    targeted audience segmentation and optimized deployment.
-                </li>
-
-                <li>
-                    Developed 50+ Marketo landing pages and collaborated
-                    with internal and agency teams to deliver
-                    brand-compliant campaign pages.
-                </li>
-
-                <li>
-                    Independently handle a significant portion of
-                    landing-page development, reducing dependency on
-                    external agency support.
-                </li>
-
-                <li>
-                    Supported migration and publishing of 500+ website
-                    pages during a major corporate website revamp.
-                </li>
-
-                <li>
-                    Managed CRM updates, inbound lead qualification and
-                    campaign audience selection using Microsoft Dynamics 365
-                    and ZoomInfo.
-                </li>
-
-                <li>
-                    Developed two Microsoft Copilot agents to automate
-                    landing-page creation and content-review workflows.
-                </li>
-
-                <li>
-                    Created marketing infographics and basic promotional
-                    videos using Canva and Adobe Premiere Pro.
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <!-- MARKETING EXECUTIVE -->
-
-        <div class="role">
-
-            <div class="role-date">
-                May 2022 — Jul 2025
-            </div>
-
-            <h3>
-                Marketing Executive
-            </h3>
-
-            <div class="role-company">
-                Orion Innovation
-            </div>
-
-            <ul>
-
-                <li>
-                    Executed email campaigns, landing page creation,
-                    CRM updates, website publishing and lead management.
-                </li>
-
-                <li>
-                    Collaborated with cross-functional teams to support
-                    successful campaign execution and operational efficiency.
-                </li>
-
-                <li>
-                    Built hands-on experience across marketing operations,
-                    campaign coordination and digital execution.
-                </li>
-
-            </ul>
-
-        </div>
-
-
-        <!-- ASSOCIATE -->
-
-        <div class="role">
-
-            <div class="role-date">
-                Apr 2021 — May 2022
-            </div>
-
-            <h3>
-                Marketing Associate
-            </h3>
-
-            <div class="role-company">
-                Orion Innovation
-            </div>
-
-            <ul>
-
-                <li>
-                    Supported marketing operations, website updates,
-                    reporting and campaign administration.
-                </li>
-
-                <li>
-                    Created basic marketing videos and infographics using
-                    Canva and Adobe Premiere Pro.
-                </li>
-
-            </ul>
-
-        </div>
-
+      <p>
+        Built a Microsoft Copilot agent to help streamline the landing-page
+        creation workflow, reducing repetitive effort around page creation
+        and improving consistency.
+      </p>
     </div>
+
+    <div class="ai-card">
+      <div class="ai-number">AGENT 02</div>
+
+      <h3>Content Review Assistant</h3>
+
+      <p>
+        Built a second AI agent focused on content review and workflow
+        support — exploring how AI can improve quality, consistency and
+        efficiency within everyday marketing operations.
+      </p>
+    </div>
+
+  </div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     WORK I ENJOY
-========================= -->
+<!-- SKILLS -->
 
-<section class="section reveal">
+<section id="skills">
 
-    <div class="eyebrow">05 — Work I Enjoy</div>
+<div class="container reveal">
 
-    <h2>
-        Work I enjoy doing.
-    </h2>
+  <div class="section-label">03 — SKILLS</div>
 
-    <p class="section-intro">
-        These are the areas where I naturally enjoy getting hands-on —
-        while staying open to new challenges.
-    </p>
+  <h2 class="section-title">
+    Skills that connect marketing and technology.
+  </h2>
 
+  <div class="skills-grid">
 
-    <div class="work-grid">
-
-        <div class="work-item">
-            <span>01</span>
-            <h3>Marketing Automation</h3>
-            <p>
-                Marketo campaigns, landing pages, Smart Lists,
-                workflows and operational execution.
-            </p>
-        </div>
-
-
-        <div class="work-item">
-            <span>02</span>
-            <h3>B2B Campaign Operations</h3>
-            <p>
-                Audience segmentation, campaign preparation,
-                QA, scheduling and deployment.
-            </p>
-        </div>
-
-
-        <div class="work-item">
-            <span>03</span>
-            <h3>Website & Digital Operations</h3>
-            <p>
-                CMS publishing, landing pages, website migration
-                and digital content execution.
-            </p>
-        </div>
-
-
-        <div class="work-item">
-            <span>04</span>
-            <h3>AI & Process Automation</h3>
-            <p>
-                Exploring smarter ways to automate repetitive
-                marketing workflows and improve efficiency.
-            </p>
-        </div>
-
+    <div class="skill">
+      <div class="skill-number">01</div>
+      <h3>Marketing Operations</h3>
+      <p>
+        Campaign execution, operational coordination, QA, scheduling,
+        deployment and process management.
+      </p>
     </div>
 
-    <div style="margin-top:35px;color:var(--muted);font-size:14px;">
-        Always open to exploring new challenges across
-        Marketing Operations, Automation, MarTech and Digital Marketing.
+    <div class="skill">
+      <div class="skill-number">02</div>
+      <h3>Marketing Automation</h3>
+      <p>
+        Adobe Marketo, workflows, campaign operations, audience selection,
+        Smart Lists and automation-oriented processes.
+      </p>
     </div>
+
+    <div class="skill">
+      <div class="skill-number">03</div>
+      <h3>B2B Campaigns</h3>
+      <p>
+        Email campaigns, HTML/text emails, segmentation, global scheduling,
+        QA and stakeholder-led deployment.
+      </p>
+    </div>
+
+    <div class="skill">
+      <div class="skill-number">04</div>
+      <h3>Website Management</h3>
+      <p>
+        CMS publishing, page updates, website content management,
+        English & Spanish pages and large-scale page migration support.
+      </p>
+    </div>
+
+    <div class="skill">
+      <div class="skill-number">05</div>
+      <h3>CRM & Lead Management</h3>
+      <p>
+        CRM updates, inbound enquiry qualification, lead lifecycle support,
+        database management and opportunity routing.
+      </p>
+    </div>
+
+    <div class="skill">
+      <div class="skill-number">06</div>
+      <h3>Digital Content</h3>
+      <p>
+        Canva, promotional graphics, basic video creation, Adobe Premiere Pro
+        and digital marketing content.
+      </p>
+    </div>
+
+  </div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     TOOLS
-========================= -->
+<!-- EXPERIENCE -->
 
-<section class="section reveal" id="tools">
+<section id="experience">
 
-    <div class="tools-layout">
+<div class="container reveal">
 
-        <div>
-            <div class="eyebrow">06 — Tools & Knowledge</div>
+  <div class="section-label">04 — EXPERIENCE</div>
 
-            <h2>
-                The stack behind
-                the work.
-            </h2>
+  <h2 class="section-title">
+    Experience that built my foundation.
+  </h2>
 
-            <p class="section-intro">
-                Platforms, marketing technologies and creative tools
-                used across my day-to-day work.
-            </p>
+  <p class="section-intro">
+    A progression from marketing support and campaign administration
+    into hands-on marketing operations, automation and digital execution.
+  </p>
+
+  <div class="timeline">
+
+    <div class="job">
+
+      <div class="job-date">
+        Jul 2025 — Present
+      </div>
+
+      <div>
+
+        <h3>Senior Marketing Specialist</h3>
+
+        <div class="job-role">
+          Marketing Operations · Orion Innovation
         </div>
 
+        <ul>
+          <li>
+            Executed 100+ B2B email campaigns in Adobe Marketo including
+            campaign setup, HTML/text email creation, Smart Lists,
+            audience segmentation, QA, scheduling and deployment.
+          </li>
 
-        <div>
+          <li>
+            Developed 50+ Marketo landing pages using templates and
+            independently handled much of the page creation workflow,
+            with agency support reduced to around 20%.
+          </li>
 
-            <div class="tool-group">
+          <li>
+            Supported the migration and publishing of 400+ website pages
+            during a major corporate website revamp.
+          </li>
 
-                <h3>Marketing Platforms</h3>
+          <li>
+            Managed English and Spanish website content and CMS publishing.
+          </li>
 
-                <div class="tool-list">
-                    <span class="tool">Adobe Marketo Engage</span>
-                    <span class="tool">HubSpot</span>
-                    <span class="tool">ZoomInfo</span>
-                    <span class="tool">Microsoft Dynamics 365</span>
-                </div>
+          <li>
+            Supported CRM updates, inbound lead qualification and
+            opportunity routing using Microsoft Dynamics 365 and ZoomInfo.
+          </li>
 
-            </div>
+          <li>
+            Built AI agents using Microsoft Copilot to explore automation
+            of landing-page creation and content-review workflows.
+          </li>
 
+          <li>
+            Created marketing infographics and basic promotional videos
+            using Canva and Adobe Premiere Pro.
+          </li>
+        </ul>
 
-            <div class="tool-group">
-
-                <h3>Automation & Productivity</h3>
-
-                <div class="tool-list">
-                    <span class="tool">Microsoft Copilot</span>
-                    <span class="tool">AI Workflow Automation</span>
-                    <span class="tool">Asana</span>
-                    <span class="tool">Process Improvement</span>
-                </div>
-
-            </div>
-
-
-            <div class="tool-group">
-
-                <h3>Digital & Creative</h3>
-
-                <div class="tool-list">
-                    <span class="tool">Website & CMS</span>
-                    <span class="tool">HTML / Text Emails</span>
-                    <span class="tool">Canva</span>
-                    <span class="tool">Adobe Premiere Pro</span>
-                    <span class="tool">Marketing Video</span>
-                    <span class="tool">Infographics</span>
-                </div>
-
-            </div>
-
-
-            <div class="tool-group">
-
-                <h3>Marketing Knowledge</h3>
-
-                <div class="tool-list">
-                    <span class="tool">B2B Marketing</span>
-                    <span class="tool">Marketing Operations</span>
-                    <span class="tool">Marketing Automation</span>
-                    <span class="tool">Lead Management</span>
-                    <span class="tool">Audience Segmentation</span>
-                    <span class="tool">CRM Operations</span>
-                    <span class="tool">Landing Pages</span>
-                    <span class="tool">Workflow Automation</span>
-                </div>
-
-            </div>
-
-        </div>
+      </div>
 
     </div>
+
+
+    <div class="job">
+
+      <div class="job-date">
+        May 2022 — Jul 2025
+      </div>
+
+      <div>
+
+        <h3>Marketing Executive</h3>
+
+        <div class="job-role">
+          Orion Innovation
+        </div>
+
+        <ul>
+          <li>
+            Executed email marketing operations, landing-page creation,
+            CRM updates and website content publishing.
+          </li>
+
+          <li>
+            Supported lead qualification, database management and
+            campaign coordination.
+          </li>
+
+          <li>
+            Worked with cross-functional teams to support successful
+            campaign delivery and operational efficiency.
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+
+    <div class="job">
+
+      <div class="job-date">
+        Apr 2021 — May 2022
+      </div>
+
+      <div>
+
+        <h3>Marketing Associate</h3>
+
+        <div class="job-role">
+          Orion Innovation
+        </div>
+
+        <ul>
+          <li>
+            Supported marketing operations, campaign administration,
+            reporting and website updates.
+          </li>
+
+          <li>
+            Assisted with lead tracking and marketing coordination.
+          </li>
+
+          <li>
+            Created basic marketing videos and infographics using Canva
+            and Adobe Premiere Pro.
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     EDUCATION
-========================= -->
+<!-- WORK -->
 
-<section class="section reveal">
+<section>
 
-    <div class="eyebrow">07 — Qualifications</div>
+<div class="container reveal">
 
-    <h2>
-        Education & professional development.
-    </h2>
+  <div class="section-label">05 — WHAT I ENJOY</div>
 
+  <h2 class="section-title">
+    Work I enjoy doing.
+  </h2>
 
-    <div class="edu-card">
+  <div class="work-grid">
 
-        <h3>
-            Bachelor of Mass Media — Advertising
-        </h3>
-
-        <p>
-            R.D. National College, Mumbai · 2018 — 2021
-        </p>
-
+    <div class="work-card">
+      <span>01</span>
+      <h3>Building</h3>
+      <p>
+        Creating landing pages, campaigns, digital experiences and
+        practical marketing solutions.
+      </p>
     </div>
 
-
-    <div style="margin-top:45px;" class="eyebrow">
-        Certifications & Courses
+    <div class="work-card">
+      <span>02</span>
+      <h3>Optimising</h3>
+      <p>
+        Finding repetitive or inefficient processes and figuring out
+        how they can work better.
+      </p>
     </div>
 
-
-    <div class="certificates">
-
-        <div class="certificate">
-            Digital Marketing Certification
-        </div>
-
-        <div class="certificate">
-            Adobe Marketo Course
-        </div>
-
-        <div class="certificate">
-            LinkedIn Digital Marketing Course
-        </div>
-
+    <div class="work-card">
+      <span>03</span>
+      <h3>Automating</h3>
+      <p>
+        Using Marketo, AI and automation to reduce manual effort
+        and improve operational consistency.
+      </p>
     </div>
+
+    <div class="work-card">
+      <span>04</span>
+      <h3>Learning & Exploring</h3>
+      <p>
+        Taking on new challenges, tools and areas of marketing where
+        I can learn, contribute and grow.
+      </p>
+    </div>
+
+  </div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     CONTACT
-========================= -->
+<!-- TOOLS -->
 
-<section class="contact reveal" id="contact">
+<section id="tools">
 
-    <div class="contact-box">
+<div class="container reveal">
 
-        <div class="eyebrow">
-            08 — Next Opportunity
-        </div>
+  <div class="section-label">06 — TOOLS & KNOWLEDGE</div>
 
-        <h2>
-            Open to the
-            next opportunity.
-        </h2>
+  <h2 class="section-title">
+    The stack behind the work.
+  </h2>
 
-        <p>
-            I'm exploring opportunities in Marketing Operations,
-            Marketing Automation, MarTech and B2B Digital Marketing
-            where I can combine campaign execution, technology and
-            process improvement to create better marketing operations.
-        </p>
+  <p class="section-intro">
+    A practical mix of marketing automation, CRM, research,
+    website, productivity and digital-content tools.
+  </p>
 
+  <div class="tools-box">
 
-        <div class="contact-links">
+    <span class="tool">Adobe Marketo</span>
+    <span class="tool">HubSpot</span>
+    <span class="tool">Microsoft Dynamics 365</span>
+    <span class="tool">ZoomInfo</span>
+    <span class="tool">Microsoft Copilot</span>
+    <span class="tool">Asana</span>
+    <span class="tool">Microsoft Excel</span>
+    <span class="tool">CRM Operations</span>
+    <span class="tool">Smart Lists</span>
+    <span class="tool">Audience Segmentation</span>
+    <span class="tool">Landing Pages</span>
+    <span class="tool">CMS / Website Management</span>
+    <span class="tool">HTML / Text Emails</span>
+    <span class="tool">Campaign Scheduling</span>
+    <span class="tool">Lead Management</span>
+    <span class="tool">Canva</span>
+    <span class="tool">Adobe Premiere Pro</span>
+    <span class="tool">Video Content</span>
+    <span class="tool">Digital Marketing</span>
+    <span class="tool">Marketing Automation</span>
 
-            <a href="mailto:adityagnihotri@gmail.com"
-               class="btn btn-primary">
-                Email Me →
-            </a>
+  </div>
 
-            <a href="https://www.linkedin.com/in/aditya-agnihotri-mktg/"
-               target="_blank"
-               class="btn">
-                LinkedIn ↗
-            </a>
-
-        </div>
-
-    </div>
+</div>
 
 </section>
 
 
-<footer>
+<!-- QUALIFICATIONS -->
 
-    <span>
-        © 2026 Aditya Agnihotri
-    </span>
+<section>
 
-    <span>
-        Marketing Operations · Automation · MarTech
-    </span>
+<div class="container reveal">
+
+  <div class="section-label">07 — QUALIFICATIONS</div>
+
+  <h2 class="section-title">
+    Education, certifications & continuous learning.
+  </h2>
+
+  <div class="qual-grid">
+
+    <div class="qual-card">
+
+      <h3>Education</h3>
+
+      <p>
+        <strong>Bachelor of Mass Media (Advertising)</strong>
+      </p>
+
+      <p style="margin-top:8px;">
+        R.D. National College, Mumbai
+      </p>
+
+      <p style="margin-top:8px;">
+        2018 — 2021
+      </p>
+
+    </div>
+
+
+    <div class="qual-card">
+
+      <h3>Certifications & Courses</h3>
+
+      <ul>
+        <li>Digital Marketing Certification</li>
+        <li>Adobe Marketo Course</li>
+        <li>LinkedIn Digital Marketing Course</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container reveal">
+
+  <div class="contact-box">
+
+    <div>
+
+      <div class="section-label">08 — NEXT OPPORTUNITY</div>
+
+      <h2>
+        Looking for my<br>
+        next <span>challenge.</span>
+      </h2>
+
+      <p class="contact-copy">
+        I'm open to opportunities where marketing operations,
+        automation, MarTech and digital execution come together —
+        and where I can continue learning while creating meaningful impact.
+      </p>
+
+    </div>
+
+    <div class="contact-links">
+
+      <a class="contact-link"
+         href="mailto:adityagnihotri@gmail.com">
+        adityagnihotri@gmail.com
+      </a>
+
+      <a class="contact-link"
+         href="https://www.linkedin.com/in/aditya-agnihotri-mktg/"
+         target="_blank"
+         rel="noopener">
+        LinkedIn ↗
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer class="container">
+
+  <span>© 2026 Aditya Agnihotri</span>
+
+  <span>Marketing Operations · Automation · MarTech</span>
 
 </footer>
 
 
 <script>
 
-/* =========================
-   CURSOR GLOW
-========================= */
+/* SCROLL REVEAL */
 
-const glow = document.querySelector(".cursor-glow");
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("visible");
+      }
+    });
+  },
+  {threshold:.12}
+);
 
-document.addEventListener("mousemove", (e) => {
-    glow.style.left = e.clientX + "px";
-    glow.style.top = e.clientY + "px";
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
 });
 
 
-/* =========================
-   SCROLL REVEAL
-========================= */
+/* 3D PROFILE CARD */
 
-const revealElements = document.querySelectorAll(".reveal");
+const scene = document.getElementById("profileScene");
+const card = document.getElementById("profileCard");
 
-const observer = new IntersectionObserver(
-    entries => {
+if(scene && card){
 
-        entries.forEach(entry => {
+  scene.addEventListener("mousemove", e => {
 
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
+    const rect = scene.getBoundingClientRect();
 
-        });
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-    },
-    {
-        threshold: .12
-    }
-);
+    const rotateY = ((x / rect.width) - .5) * 12;
+    const rotateX = ((y / rect.height) - .5) * -12;
 
-revealElements.forEach(el => observer.observe(el));
+    card.style.transform =
+      `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(8px)`;
 
+  });
 
-/* =========================
-   3D PROFILE CARD
-========================= */
-
-const card = document.getElementById("tiltCard");
-
-if (card) {
-
-    const inner = card.querySelector(".profile-card");
-
-    card.addEventListener("mousemove", (e) => {
-
-        const rect = card.getBoundingClientRect();
-
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const rotateY =
-            ((x / rect.width) - .5) * 10;
-
-        const rotateX =
-            ((y / rect.height) - .5) * -10;
-
-        inner.style.transform =
-            `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-    });
-
-    card.addEventListener("mouseleave", () => {
-
-        inner.style.transform =
-            "rotateX(0deg) rotateY(0deg)";
-
-    });
+  scene.addEventListener("mouseleave", () => {
+    card.style.transform =
+      "rotateX(0deg) rotateY(0deg) translateZ(0)";
+  });
 
 }
 
 
-/* =========================
-   CARD 3D MICRO EFFECT
-========================= */
+/* ACTIVE NAV */
 
-document.querySelectorAll(".agent-card, .skill-card").forEach(card => {
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".navlinks a");
 
-    card.addEventListener("mousemove", e => {
+window.addEventListener("scroll", () => {
 
-        const rect = card.getBoundingClientRect();
+  let current = "";
 
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
+  sections.forEach(section => {
 
-        const rotateY =
-            ((x / rect.width) - .5) * 4;
+    const top = section.offsetTop - 180;
 
-        const rotateX =
-            ((y / rect.height) - .5) * -4;
+    if(window.scrollY >= top){
+      current = section.getAttribute("id");
+    }
 
-        card.style.transform =
-            `perspective(700px)
-             rotateX(${rotateX}deg)
-             rotateY(${rotateY}deg)
-             translateY(-5px)`;
+  });
 
-    });
+  navLinks.forEach(link => {
 
-    card.addEventListener("mouseleave", () => {
+    link.style.color = "";
 
-        card.style.transform = "";
+    if(link.getAttribute("href") === "#" + current){
+      link.style.color = "#a5ff3f";
+    }
 
-    });
+  });
 
 });
 
